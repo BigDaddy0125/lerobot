@@ -1,5 +1,15 @@
 export function renderShowcase(content) {
-  const [feature, ...rest] = content.items
+  const items = content.items
+    .map(
+      (item, index) => `
+        <article class="showcase-card showcase-card-${index + 1} reveal">
+          <p class="showcase-meta">${item.meta}</p>
+          <h3>${item.title}</h3>
+          <p>${item.body}</p>
+        </article>
+      `,
+    )
+    .join('')
 
   return `
     <section class="section showcase-section">
@@ -8,26 +18,7 @@ export function renderShowcase(content) {
           <p class="eyebrow">${content.eyebrow}</p>
           <h2>${content.title}</h2>
         </div>
-        <div class="showcase-editorial">
-          <article class="showcase-feature reveal">
-            <p class="showcase-meta">${feature.meta}</p>
-            <h3>${feature.title}</h3>
-            <p>${feature.body}</p>
-          </article>
-          <div class="showcase-stack">
-            ${rest
-              .map(
-                (item) => `
-                  <article class="showcase-card reveal">
-                    <p class="showcase-meta">${item.meta}</p>
-                    <h3>${item.title}</h3>
-                    <p>${item.body}</p>
-                  </article>
-                `,
-              )
-              .join('')}
-          </div>
-        </div>
+        <div class="showcase-matrix">${items}</div>
       </div>
     </section>
   `

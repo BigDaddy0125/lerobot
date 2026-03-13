@@ -1,5 +1,18 @@
 export function renderUseCases(content) {
-  const [featured, secondary, tertiary] = content.items
+  const items = content.items
+    .map(
+      (item, index) => `
+        <article class="usecase-column usecase-column-${index + 1} reveal">
+          <div class="usecase-column-top">
+            <p class="usecase-kicker">${item.kicker}</p>
+            <span class="usecase-column-index">0${index + 1}</span>
+          </div>
+          <h3>${item.title}</h3>
+          <p>${item.body}</p>
+        </article>
+      `,
+    )
+    .join('')
 
   return `
     <section id="use-cases" class="section usecase-section">
@@ -9,27 +22,7 @@ export function renderUseCases(content) {
           <h2>${content.title}</h2>
           <p>${content.description}</p>
         </div>
-        <div class="usecase-stage">
-          <article class="usecase-feature reveal">
-            <p class="usecase-kicker">${featured.kicker}</p>
-            <h3>${featured.title}</h3>
-            <p>${featured.body}</p>
-          </article>
-          <div class="usecase-side">
-            <article class="usecase-card reveal">
-              <p class="usecase-kicker">${secondary.kicker}</p>
-              <h3>${secondary.title}</h3>
-              <p>${secondary.body}</p>
-            </article>
-            <article class="usecase-band reveal">
-              <span class="usecase-kicker">${tertiary.kicker}</span>
-              <div class="usecase-band-copy">
-                <h3>${tertiary.title}</h3>
-                <p>${tertiary.body}</p>
-              </div>
-            </article>
-          </div>
-        </div>
+        <div class="usecase-columns">${items}</div>
       </div>
     </section>
   `
