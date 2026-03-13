@@ -42,7 +42,7 @@
 }
 
 .brand-copy strong {
-  font-family: var(--font-display);
+  font-family: var(--font-brand);
   font-size: 1.3rem;
   line-height: 1;
   font-weight: 600;

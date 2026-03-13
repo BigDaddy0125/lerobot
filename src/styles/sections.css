@@ -23,9 +23,9 @@
   max-width: 11ch;
   font-family: var(--font-display);
   font-size: clamp(3rem, 7vw, 5.8rem);
-  line-height: 0.92;
+  line-height: 1.02;
   letter-spacing: -0.04em;
-  font-weight: 600;
+  font-weight: 800;
 }
 
 .hero h1 span {
@@ -129,8 +129,8 @@
 .signal-lead-block h2 {
   font-family: var(--font-display);
   font-size: clamp(1.8rem, 3vw, 2.8rem);
-  line-height: 1.02;
-  font-weight: 600;
+  line-height: 1.08;
+  font-weight: 700;
   margin-bottom: 10px;
 }
 
@@ -187,8 +187,8 @@
 .strip-grid h2 {
   font-family: var(--font-display);
   font-size: clamp(2.2rem, 3vw, 3.4rem);
-  line-height: 1.04;
-  font-weight: 600;
+  line-height: 1.1;
+  font-weight: 700;
 }
 
 .split-section {
@@ -298,8 +298,8 @@
 .capability-feature h3 {
   font-family: var(--font-display);
   font-size: clamp(2rem, 3vw, 3rem);
-  line-height: 1.02;
-  font-weight: 600;
+  line-height: 1.08;
+  font-weight: 700;
 }
 
 .capability-list {
@@ -359,8 +359,8 @@
 .usecase-feature h3 {
   font-family: var(--font-display);
   font-size: clamp(2rem, 3vw, 3rem);
-  line-height: 1.02;
-  font-weight: 600;
+  line-height: 1.08;
+  font-weight: 700;
 }
 
 .usecase-stack {
@@ -418,8 +418,8 @@
 .trust-manifesto h2 {
   font-family: var(--font-display);
   font-size: clamp(2.2rem, 3vw, 3.4rem);
-  line-height: 1.04;
-  font-weight: 600;
+  line-height: 1.1;
+  font-weight: 700;
 }
 
 .trust-list {

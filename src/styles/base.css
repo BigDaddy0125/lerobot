@@ -80,9 +80,9 @@ dd {
 .section-heading h2 {
   font-family: var(--font-display);
   font-size: clamp(2.4rem, 3.6vw, 4rem);
-  line-height: 1.02;
-  letter-spacing: -0.03em;
-  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  font-weight: 700;
 }
 
 .section-heading p,
