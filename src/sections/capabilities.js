@@ -15,14 +15,17 @@ export function renderCapabilities(content) {
             <h3>${featured.title}</h3>
             <p>${featured.body}</p>
           </article>
-          <div class="capability-list">
+          <div class="capability-list capability-rail">
             ${rest
               .map(
-                (item) => `
-                  <article class="capability-card reveal">
-                    <p class="capability-mini-label">${item.label}</p>
-                    <h3>${item.title}</h3>
-                    <p>${item.body}</p>
+                (item, index) => `
+                  <article class="capability-row reveal">
+                    <span class="capability-row-index">0${index + 2}</span>
+                    <div class="capability-row-copy">
+                      <p class="capability-mini-label">${item.label}</p>
+                      <h3>${item.title}</h3>
+                      <p>${item.body}</p>
+                    </div>
                   </article>
                 `,
               )

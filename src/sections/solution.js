@@ -1,8 +1,10 @@
 export function renderSolution(content) {
-  const items = content.items
+  const [lead, ...rest] = content.items
+
+  const items = rest
     .map(
       (item) => `
-        <article class="problem-card reveal">
+        <article class="problem-step reveal">
           <span class="problem-index">${item.index}</span>
           <div class="problem-body">
             <h3>${item.title}</h3>
@@ -21,7 +23,16 @@ export function renderSolution(content) {
           <h2>${content.title}</h2>
           <p>${content.description}</p>
         </div>
-        <div class="problem-rail">${items}</div>
+        <div class="problem-flow">
+          <article class="problem-anchor reveal">
+            <span class="problem-index">${lead.index}</span>
+            <div class="problem-anchor-copy">
+              <h3>${lead.title}</h3>
+              <p>${lead.body}</p>
+            </div>
+          </article>
+          <div class="problem-rail">${items}</div>
+        </div>
       </div>
     </section>
   `

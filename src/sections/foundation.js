@@ -1,5 +1,7 @@
 export function renderFoundation(content) {
-  const items = content.items
+  const [lead, ...rest] = content.items
+
+  const items = rest
     .map(
       (item) => `
         <div class="trust-point">
@@ -18,7 +20,13 @@ export function renderFoundation(content) {
           <h2>${content.title}</h2>
           <p>${content.lead}</p>
         </div>
-        <div class="trust-list reveal">${items}</div>
+        <div class="trust-composition">
+          <article class="trust-lead reveal">
+            <h3>${lead.title}</h3>
+            <p>${lead.body}</p>
+          </article>
+          <div class="trust-list reveal">${items}</div>
+        </div>
       </div>
     </section>
   `
