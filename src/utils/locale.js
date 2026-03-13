@@ -1,4 +1,16 @@
 const SUPPORTED_LOCALES = ['ja', 'en']
+const BASE_URL = import.meta.env.BASE_URL || '/'
+
+function withBasePath(pathname) {
+  const base = BASE_URL.endsWith('/') ? BASE_URL.slice(0, -1) : BASE_URL
+  const normalizedPath = pathname.startsWith('/') ? pathname : `/${pathname}`
+
+  if (!base) {
+    return normalizedPath
+  }
+
+  return `${base}${normalizedPath}`
+}
 
 export function getLocaleFromUrl() {
   const url = new URL(window.location.href)
@@ -22,8 +34,9 @@ export function buildLocalizedHref(href, locale) {
   }
 
   const [pathPart, hashPart] = href.split('#')
-  const path = pathPart || window.location.pathname
-  const url = new URL(path, window.location.origin)
+  const currentPath = window.location.pathname.replace(BASE_URL.replace(/\/$/, ''), '') || '/index.html'
+  const rawPath = pathPart || currentPath
+  const url = new URL(withBasePath(rawPath), window.location.origin)
   url.searchParams.set('lang', locale)
 
   if (hashPart) {
