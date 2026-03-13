@@ -7,9 +7,9 @@ export const companyContent = {
   },
   hero: {
     eyebrow: 'Company',
-    title: '受託開発の技術基盤から、<span>製品開発型のロボティクス企業</span>へ。',
+    title: '受託開発の技術基盤から、<span>ロボティクス開発事業</span>へ。',
     lead:
-      '石竹株式会社は、Java / AWS を軸にしたシステム開発と AI 受託開発で基盤を築きながら、Jetson Nano、ROS2、VSLAM を活用したロボティクス研究開発を進めてきました。現在はその延長線上で、遠隔支援ロボットと機械腕開発を事業として磨き込んでいます。',
+      '石竹株式会社は、Java / AWS を軸にしたシステム開発と AI 受託開発で基盤を築きながら、Jetson Nano、ROS2、VSLAM を活用したロボティクス研究開発を進めてきました。このページでは、その技術基盤と共同開発の考え方を整理しています。',
     actions: [
       { label: 'Technology', href: '/technology.html', variant: 'secondary' },
       { label: '相談する', href: '/index.html#contact', variant: 'primary' },
@@ -20,10 +20,10 @@ export const companyContent = {
       { label: 'Model', value: 'Co-Development / Prototype / OEM' },
     ],
     blueprint: [
-      { title: 'Software Delivery', body: '業務システムとクラウド構築の経験。' },
+      { title: 'Software Delivery', body: '業務システムとクラウド開発の実績。' },
       { title: 'AI Engineering', body: '画像認識、自然言語処理、推論導線の実装。' },
       { title: 'Robotics Prototyping', body: 'Jetson、ROS2、センサー、3Dプリントを使った試作。' },
-      { title: 'Business Transition', body: '受託依存から製品開発型への転換を推進。' },
+      { title: 'Business Expansion', body: '受託開発から自社ロボティクス事業への展開。' },
     ],
     diagram: ['Build', 'Integrate', 'Prototype', 'Validate', 'Scale'],
   },
@@ -34,21 +34,21 @@ export const companyContent = {
     { label: 'Approach', value: '共同開発・試作支援・実装伴走' },
   ],
   strengths: [
-    { title: 'Practical Software Depth', body: 'Java / Spring Boot / AWS を土台にした堅い実装力。' },
-    { title: 'Rapid Prototyping', body: 'Jetson Nano、ROS2、VSLAM、3Dプリントを組み合わせた高速試作。' },
-    { title: 'Cross-Disciplinary Thinking', body: 'ソフト、クラウド、機械、UI を分けずに設計できる体制。' },
+    { title: 'Practical Software Base', body: 'Java / Spring Boot / AWS を軸にしたシステム開発の基盤。' },
+    { title: 'Rapid Prototyping', body: 'Jetson Nano、ROS2、VSLAM、3Dプリントを組み合わせた試作開発。' },
+    { title: 'Cross-Functional Design', body: 'ソフト、クラウド、機械、UI を分けずに設計する進め方。' },
   ],
   collaboration: [
     {
-      title: '共同開発パートナーとして入る',
-      body: 'ロボット新規事業や既存プロダクトへの組み込みに対して、技術側の伴走者として参加します。',
+      title: '共同開発パートナーとして参加',
+      body: 'ロボット新規事業や既存プロダクトへの組み込みに対して、技術開発側として伴走します。',
     },
     {
-      title: 'PoC を短く回す',
-      body: '最初から完成品を目指さず、動作検証を通じて構成と投資優先度を整理します。',
+      title: 'PoC を段階的に進める',
+      body: '最初から完成品を目指すのではなく、試作と検証を通じて構成と優先度を整理します。',
     },
     {
-      title: '運用まで見据える',
+      title: '運用まで含めて考える',
       body: '導入後の監視、更新、メンテナンス導線まで初期設計に含めます。',
     },
   ],

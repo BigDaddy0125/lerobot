@@ -8,9 +8,9 @@ export const homeContent = {
   },
   hero: {
     eyebrow: 'Remote Support Robotics / Robotic Arm Development',
-    title: '遠隔支援ロボットと機械腕を、<span>現場で動く構成</span>まで設計する。',
+    title: '遠隔支援ロボットと機械腕を、<span>構成設計から試作</span>まで進める。',
     lead:
-      '石竹株式会社は、LeRobot、ROS2、Jetson Nano、AWS IoT を基盤に、移動台車、機械腕、遠隔操作、クラウド運用を一体で設計・試作・改善します。家庭内支援から福祉施設向けソリューション、共同開発まで、実装前提で前に進めるロボティクス開発を提供します。',
+      '石竹株式会社は、LeRobot / XLeRobot、ROS2、Jetson Nano、AWS IoT を基盤に、移動台車、機械腕、遠隔操作、クラウド連携を組み合わせた遠隔支援ロボットの開発に取り組んでいます。家庭内支援や福祉施設向け展開を見据えた構成を、試作と検証を通じて具体化します。',
     actions: [
       { label: '相談する', href: '#contact', variant: 'primary' },
       { label: '技術を見る', href: '/technology.html', variant: 'secondary' },
@@ -23,7 +23,7 @@ export const homeContent = {
     blueprint: [
       {
         title: 'Edge Control',
-        body: 'Jetson Nano / Raspberry Pi / MCU によるローカル推論、制御、センサ統合。',
+        body: 'Jetson Nano や Raspberry Pi / MCU によるローカル制御、センサ統合、AI 推論。',
       },
       {
         title: 'Remote Ops',
@@ -31,104 +31,104 @@ export const homeContent = {
       },
       {
         title: 'Mobility + Arm',
-        body: '小型モビリティ台車と多自由度アームを組み合わせた移動作業支援。',
+        body: '小型モビリティ台車と多自由度アームを組み合わせた遠隔支援構成。',
       },
       {
-        title: 'Cloud Loop',
-        body: 'AWS IoT Core、Lambda、SageMaker によるログ収集、OTA、改善サイクル。',
+        title: 'Cloud Link',
+        body: 'AWS IoT Core を中心としたログ可視化、遠隔更新、保守支援。',
       },
     ],
     diagram: ['User UI', 'Cloud', 'ROS2 Edge', 'Arm', 'Mobility'],
   },
   intro: {
-    label: 'Why Now',
-    title: '受託開発で培ったソフトウェア力を、ロボティクスの実装力へ。',
+    label: 'Why This Business',
+    title: '受託開発で培った技術を、ロボティクス事業へ展開する。',
     body:
-      'Java / AWS / AI の実務実績に、Jetson Nano、ROS2、VSLAM、3Dプリントを組み合わせ、プロトタイプから運用改善までつなげられることが石竹の強みです。このサイトでは、その技術蓄積を「遠隔支援ロボット・機械腕開発」という事業軸で再構成しています。',
+      '資料では、石竹株式会社が Java / AWS を軸にした SES・受託開発、AI 開発、IoT 開発を通じて技術基盤を築き、その延長線上で Jetson Nano、ROS2、VSLAM を用いたロボティクス研究開発へ取り組んできたことが確認できます。このサイトは、その流れを「遠隔支援ロボット・機械腕開発」という事業として整理したものです。',
   },
   solution: {
-    eyebrow: 'Solution',
-    title: '単体のロボットではなく、支援体験全体を設計します。',
+    eyebrow: 'Development Scope',
+    title: 'ロボット単体ではなく、運用に必要な構成全体を扱います。',
     description:
-      '移動、把持、遠隔操作、監視、更新、安全設計を分断せず、使える状態まで組み上げるのが私たちの役割です。',
+      '資料に記載された技術要素をもとに、移動、把持、遠隔操作、監視、更新、安全設計を一体で構成します。',
     items: [
       {
         index: '01',
-        title: '現場で使える形にまとまらない',
-        body: 'ロボット単体、アプリ単体、クラウド単体で止まらず、連携する全体構成に落とし込みます。',
+        title: '移動と作業を分けずに設計',
+        body: '小型自走台車と機械腕を組み合わせ、家庭内や屋内での遠隔支援を想定した構成を検討します。',
       },
       {
         index: '02',
-        title: '低コストと実用性の両立が難しい',
-        body: 'オープンソース基盤、汎用部材、3Dプリントを活用しながら、用途に応じた堅牢性を設計します。',
+        title: 'オープンソース基盤を活用',
+        body: 'LeRobot / XLeRobot を基盤にしながら、既存構成との互換性や試作速度を重視します。',
       },
       {
         index: '03',
-        title: '遠隔運用や保守まで見据えられていない',
-        body: 'AWS IoT と OTA 更新を前提に、導入後も改善できる仕組みを初期段階から組み込みます。',
+        title: '遠隔運用まで含めて考える',
+        body: 'AWS IoT、WebRTC、Web UI を組み合わせ、監視や更新を含む運用導線まで視野に入れます。',
       },
     ],
   },
   architecture: {
     eyebrow: 'Architecture',
-    title: '遠隔支援ロボットの構成を、エッジからクラウドまで分解。',
+    title: '遠隔支援ロボットの構成を、エッジからクラウドまで整理。',
     description:
-      'LeRobot / XLeRobot、ROS2、WebRTC、AWS IoT を横断して、試作だけで終わらない実装アーキテクチャを設計します。',
+      '資料で確認できた技術要素を、ユーザーUI、クラウド、ロボットエッジ、モビリティ・機械腕の四層で再整理しています。',
     layers: [
       { tag: '01', title: 'User Interface', body: 'Web アプリ / スマホアプリ / 音声UI による遠隔操作、状態表示、モニタリング。' },
       { tag: '02', title: 'Cloud Control Plane', body: 'AWS IoT Core、Lambda、DynamoDB、S3、SageMaker、MQTT、OTA 更新。' },
-      { tag: '03', title: 'Robot Edge', body: 'Jetson Nano、Greengrass、ROS2 nav2、YOLOv8、MoveIt2 による推論と行動計画。' },
+      { tag: '03', title: 'Robot Edge', body: 'Jetson Nano、Greengrass、ROS2 nav2、YOLOv8、MoveIt2 による認識と制御。' },
       { tag: '04', title: 'Mobility & Manipulation', body: '4WD または Omniwheel 台車、多自由度アーム、交換式ツール、距離センサー、IMU、LiDAR。' },
     ],
   },
   capabilities: {
     eyebrow: 'Capabilities',
-    title: '開発できるのは、機能ではなく運用可能な能力です。',
+    title: '資料に基づく開発対象。',
     items: [
-      { title: '移動と障害物回避', body: 'ROS2、SLAM、VSLAM、距離センサー、カメラ統合により、屋内の自律移動と安全停止を設計。' },
+      { title: '移動と障害物回避', body: 'ROS2、SLAM / VSLAM、距離センサー、カメラ統合により、屋内移動と安全停止を設計。' },
       { title: '機械腕とエンドエフェクタ', body: '最大 800g クラスの把持、トレイ、ブラシ、モップなど交換式ツールの構成検討と試作。' },
-      { title: '遠隔操作 UI', body: 'WebRTC、Web UI、スマホ UI を通じた遠隔支援、モニタリング、指示入力フローを設計。' },
-      { title: 'クラウド改善ループ', body: 'ログ収集、モデル再学習、OTA 配信、ダッシュボード化まで含めて継続運用を見据えます。' },
-      { title: '日本環境への適応', body: '畳、障子、段差、室内レイアウトなど、日本の生活環境に合わせた移動条件を調整可能。' },
-      { title: '安全設計', body: '低トルク、短アーム、緊急停止、転倒検知、物理制限など、ハード段階から安全性を確保。' },
+      { title: '遠隔操作 UI', body: 'WebRTC、Web UI、スマホ UI を通じた遠隔支援、モニタリング、状態表示。' },
+      { title: 'クラウド連携', body: 'ログ収集、モデル再学習、OTA 配信、ダッシュボード化を含む運用設計。' },
+      { title: '日本環境への適応', body: '畳、段差、室内レイアウトなど、日本の生活環境を前提にした移動条件の調整。' },
+      { title: '安全設計', body: '低トルク、短アーム、緊急停止、転倒検知、物理制限などを組み合わせた安全対策。' },
     ],
   },
   showcase: {
-    eyebrow: 'Featured Differentiators',
-    title: '資料から抽出した、事業の核となる差別化ポイント。',
+    eyebrow: 'Documented Advantages',
+    title: '資料から確認できた開発上の特徴。',
     items: [
-      { title: 'Open Source Native', body: 'LeRobot / XLeRobot 互換を意識し、既存コードや戦略の移植性を担保。', meta: 'Compatibility' },
-      { title: 'Cost-Aware Robotics', body: '3Dプリント、汎用部材、モジュール設計を活用し、初期検証コストを圧縮。', meta: 'Prototype Speed' },
-      { title: 'Remote-First Operations', body: '遠隔操作、稼働監視、OTA 更新を初期構成に含め、導入後の改善を前提化。', meta: 'Lifecycle' },
-      { title: 'Japan-Tuned UX', body: '畳・段差・生活導線を踏まえた設計で、日本の居住環境に合わせやすい構成。', meta: 'Environment Fit' },
+      { title: 'Open Source Compatibility', body: 'LeRobot / XLeRobot を基盤に、既存コードや戦略を移植しやすい構成を目指す。', meta: 'Compatibility' },
+      { title: 'Prototype Cost Awareness', body: '3Dプリント、汎用部材、モジュール設計を用いて試作コストを抑える方向性。', meta: 'Prototype' },
+      { title: 'Remote Operations', body: '遠隔操作、状態表示、クラウド連携、OTA 更新を含む運用設計。', meta: 'Operations' },
+      { title: 'Japan Environment Fit', body: '畳や段差など、日本の居住環境を前提にした移動・利用シーンへの対応。', meta: 'Environment' },
     ],
   },
   useCases: {
     eyebrow: 'Use Cases',
-    title: '資料から見えた適用領域を、事業用途として再編集。',
+    title: '資料から見える適用先。',
     items: [
-      { kicker: 'Home Support', title: '家庭内の遠隔支援', body: '物品移動、見守り、遠隔対話、軽作業支援など、生活補助を想定した構成。' },
-      { kicker: 'Welfare / Care', title: '福祉施設・介護現場', body: '配膳補助、モニタリング、巡回、遠隔コミュニケーションなどへの展開を見据えます。' },
-      { kicker: 'OEM / Co-Development', title: '共同開発・OEM 組み込み', body: '既存製品にロボットアーム、遠隔制御、センサ統合、クラウド監視を組み込む開発体制。' },
+      { kicker: 'Home Support', title: '家庭内の遠隔支援', body: '物品移動、見守り、遠隔操作など、日常生活を支援する用途。' },
+      { kicker: 'Welfare / Care', title: '福祉施設・介護現場', body: '配膳支援やモニタリングなど、施設向けソリューションへの展開。' },
+      { kicker: 'OEM / Co-Development', title: '共同開発・OEM', body: '既存製品にロボットアーム、遠隔制御、センサ統合、クラウド監視を組み込む方向。' },
     ],
   },
   process: {
     eyebrow: 'Process',
-    title: '相談から試作、改善までの進め方。',
+    title: '構想から試作までの進め方。',
     items: [
-      { phase: 'Phase 1', title: '要件整理', body: '想定環境、支援内容、必要な自由度、遠隔操作の粒度、安全条件を定義します。' },
-      { phase: 'Phase 2', title: '構成設計', body: '台車、機械腕、センサー、Jetson、クラウド、UI を用途別に組み合わせて全体を設計します。' },
-      { phase: 'Phase 3', title: '試作と検証', body: '3Dプリントや既存フレームワークを活かし、スピード重視で試作と挙動検証を回します。' },
-      { phase: 'Phase 4', title: '遠隔運用と改善', body: 'ログ収集、モニタリング、OTA 更新、再学習によって導入後の改善ループを作ります。' },
+      { phase: 'Phase 1', title: '要件整理', body: '対象環境、支援内容、必要な自由度、遠隔操作の粒度、安全条件を整理。' },
+      { phase: 'Phase 2', title: '構成設計', body: '台車、機械腕、センサー、Jetson、クラウド、UI を用途別に組み合わせて全体を設計。' },
+      { phase: 'Phase 3', title: '試作と検証', body: '3Dプリントや既存フレームワークを活かし、試作と挙動検証を実施。' },
+      { phase: 'Phase 4', title: '遠隔運用の検討', body: 'ログ収集、モニタリング、OTA 更新、保守導線まで含めた運用設計。' },
     ],
   },
   foundation: {
     eyebrow: 'Engineering Base',
-    title: '石竹株式会社の土台にあるのは、受託現場で積み上げた開発力です。',
+    title: '石竹株式会社の開発基盤。',
     items: [
       { title: 'Software Foundation', body: 'Java / Spring Boot / AWS を軸にした業務システム、IoT、AI 開発実績。' },
-      { title: 'Robotics R&D', body: 'Jetson Nano、ROS2、VSLAM、センサ統合、3Dプリントによる迅速な試作開発。' },
-      { title: 'Collaboration Model', body: '共同開発、試作支援、要件整理、OEM 連携まで、実装側として伴走可能。' },
+      { title: 'Robotics R&D', body: 'Jetson Nano、ROS2、VSLAM、センサ統合、3Dプリントによる試作開発。' },
+      { title: 'Collaboration Model', body: '共同開発、試作支援、要件整理、OEM 連携まで伴走可能な体制。' },
     ],
   },
   contact: {

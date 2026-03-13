@@ -7,9 +7,9 @@ export const technologyContent = {
   },
   hero: {
     eyebrow: 'Technology',
-    title: 'ハード、ソフト、クラウドを分断しない <span>開発アーキテクチャ</span>。',
+    title: 'ハード、ソフト、クラウドを分断しない <span>開発構成</span>。',
     lead:
-      '優れたロボットサイトに共通しているのは、単なる技術名の列挙ではなく、どの構成がどの価値に直結するかを明快に見せていることです。このページでは、石竹の遠隔支援ロボット開発をその視点で整理しています。',
+      'このページでは、資料に記載されたロボット技術構成を整理しています。LeRobot / XLeRobot、ROS2、Jetson Nano、AWS IoT、センサー類、遠隔操作 UI を組み合わせ、遠隔支援ロボットを構成する考え方を見せるためのページです。',
     actions: [
       { label: 'Home に戻る', href: '/index.html', variant: 'secondary' },
       { label: '相談する', href: '/index.html#contact', variant: 'primary' },
@@ -20,22 +20,22 @@ export const technologyContent = {
       { label: 'Cloud', value: 'IoT Core / Lambda / SageMaker / OTA' },
     ],
     blueprint: [
-      { title: 'Perception Stack', body: '視覚、距離、姿勢情報を束ね、移動と把持の判断材料を生成。' },
-      { title: 'Planning Stack', body: '移動計画、姿勢制御、遠隔指示を一貫して処理。' },
-      { title: 'Hardware Stack', body: '機械腕、台車、電源、センサーを用途別にモジュール化。' },
-      { title: 'Service Stack', body: 'ログ、認証、OTA、保守導線まで含めた運用設計。' },
+      { title: 'Perception Stack', body: '視覚、距離、姿勢情報を束ね、移動や把持に必要な認識を行う。' },
+      { title: 'Planning Stack', body: '移動計画、姿勢制御、遠隔指示を一貫して扱う制御レイヤー。' },
+      { title: 'Hardware Stack', body: '機械腕、台車、電源、センサーを用途に応じて組み合わせる。' },
+      { title: 'Service Stack', body: 'ログ、認証、OTA、保守導線まで含めたクラウド連携。' },
     ],
     diagram: ['Sense', 'Plan', 'Act', 'Sync', 'Improve'],
   },
   systems: [
     {
       title: 'Edge Intelligence',
-      body: 'Jetson Nano 上で認識・推論・制御を行い、通信断時にもローカル判断を継続できる構成を目指します。',
-      points: ['ROS2 ノードベースの分散設計', 'YOLOv8 / MoveIt2 / nav2 統合', 'Raspberry Pi / MCU と役割分担'],
+      body: 'Jetson Nano 上で認識・推論・制御を行い、ローカル制御を軸にしたロボット構成を目指します。',
+      points: ['ROS2 ノードベースの構成', 'YOLOv8 / MoveIt2 / nav2 統合', 'Raspberry Pi / MCU と役割分担'],
     },
     {
       title: 'Cloud Robotics Operations',
-      body: 'AWS IoT Core、MQTT、Lambda、DynamoDB、SageMaker により、遠隔監視と改善ループを構成します。',
+      body: 'AWS IoT Core、MQTT、Lambda、DynamoDB、SageMaker を用いて、遠隔監視と改善ループを構成します。',
       points: ['稼働ログの可視化', 'OTA 配信', 'モデル再学習と保守支援'],
     },
     {
@@ -52,16 +52,16 @@ export const technologyContent = {
   ],
   safety: [
     {
-      title: 'Low Torque Philosophy',
-      body: '万一の接触でも危険性を抑える低トルク方針を前提に、可搬と安全のバランスを取ります。',
+      title: 'Low Torque Design',
+      body: '資料では、低トルクモーターを用いて接触時の危険性を下げる考え方が示されています。',
     },
     {
       title: 'Physical Safety Limits',
-      body: '短いアーム長、車輪式ベース、段差制限など、機構段階からアクセス範囲を制御します。',
+      body: '短いアーム長、車輪式ベース、段差制限など、機構段階からアクセス範囲を制御する考え方です。',
     },
     {
       title: 'Operational Safety',
-      body: '緊急停止、転倒検知、障害物回避、遠隔モニタリングを組み合わせて運用面を補強します。',
+      body: '緊急停止、転倒検知、障害物回避、遠隔モニタリングを組み合わせて安全性を補強します。',
     },
   ],
 }
