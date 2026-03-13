@@ -16,18 +16,39 @@ export function renderHero(content, locale) {
     )
     .join('')
 
-  const blueprint = content.blueprint
-    .map(
-      (item, index) => `
-        <article class="signal-entry signal-entry-${index + 1}">
-          <p class="signal-entry-kicker">${item.title}</p>
-          <p>${item.body}</p>
-        </article>
-      `,
-    )
-    .join('')
+  const [primary, secondary, tertiary] = content.blueprint
 
-  const diagram = content.diagram.map((item) => `<span>${item}</span>`).join('')
+  const summary = `
+    <article class="signal-summary">
+      <div class="signal-summary-head">
+        <span class="signal-pill is-live">${content.panel.liveLabel}</span>
+        <span class="signal-pill">${content.panel.statusLabel}</span>
+      </div>
+      <p class="signal-overline">${content.panel.overline}</p>
+      <h2>${content.panel.title}</h2>
+      <p>${content.panel.body}</p>
+    </article>
+  `
+
+  const details = `
+    <div class="signal-detail-grid">
+      <article class="signal-detail-card">
+        <p class="signal-entry-kicker">${primary.title}</p>
+        <p>${primary.body}</p>
+      </article>
+      <article class="signal-detail-card">
+        <p class="signal-entry-kicker">${secondary.title}</p>
+        <p>${secondary.body}</p>
+      </article>
+    </div>
+  `
+
+  const strip = `
+    <div class="signal-strip" aria-label="System Flow">
+      ${content.diagram.map((item) => `<span>${item}</span>`).join('')}
+    </div>
+    <p class="signal-strip-note">${tertiary.title}: ${tertiary.body}</p>
+  `
 
   return `
     <section class="hero">
@@ -42,19 +63,9 @@ export function renderHero(content, locale) {
         </div>
         <div class="hero-panel reveal">
           <div class="signal-card">
-            <div class="signal-frame">
-              <div class="signal-frame-head">
-                <span class="signal-pill is-live">${content.panel.liveLabel}</span>
-                <span class="signal-pill">${content.panel.statusLabel}</span>
-              </div>
-              <div class="signal-lead-block">
-                <p class="signal-overline">${content.panel.overline}</p>
-                <h2>${content.panel.title}</h2>
-                <p>${content.panel.body}</p>
-              </div>
-            </div>
-            <div class="signal-grid signal-grid-layered">${blueprint}</div>
-            <div class="system-diagram" aria-hidden="true">${diagram}</div>
+            ${summary}
+            ${details}
+            ${strip}
           </div>
         </div>
       </div>
