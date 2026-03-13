@@ -353,8 +353,9 @@
 
 .capability-stage {
   display: grid;
-  grid-template-columns: 1.02fr 0.98fr;
+  grid-template-columns: 1fr;
   gap: 14px;
+  align-items: start;
 }
 
 .capability-feature {
@@ -366,6 +367,17 @@
     var(--panel-strong);
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
+}
+
+.capability-feature-compact {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.capability-feature-body {
+  max-width: 820px;
 }
 
 .capability-feature h3 {
@@ -382,8 +394,9 @@
   gap: 0;
 }
 
-.capability-rail {
-  border-top: 1px solid rgba(171, 191, 212, 0.12);
+.capability-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 18px;
 }
 
 .capability-row {
@@ -391,8 +404,10 @@
   grid-template-columns: 56px 1fr;
   gap: 18px;
   align-items: start;
-  padding: 14px 0;
-  border-bottom: 1px solid rgba(171, 191, 212, 0.12);
+  padding: 16px 18px;
+  border: 1px solid rgba(171, 191, 212, 0.12);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.025);
 }
 
 .capability-row-index {
@@ -659,6 +674,7 @@
 
   .hero-metrics,
   .architecture-track,
+  .capability-grid,
   .showcase-matrix,
   .usecase-columns,
   .deep-grid,
@@ -752,8 +768,10 @@
 
   .problem-feature,
   .problem-compact,
+  .capability-feature-compact,
   .usecase-column {
     padding: 18px;
+    grid-template-columns: 1fr;
   }
 
   .timeline-item,

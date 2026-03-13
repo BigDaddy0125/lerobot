@@ -10,12 +10,14 @@ export function renderCapabilities(content) {
           <p>${content.description}</p>
         </div>
         <div class="capability-stage">
-          <article class="capability-feature reveal">
+          <article class="capability-feature capability-feature-compact reveal">
             <p class="capability-feature-label">${featured.label}</p>
-            <h3>${featured.title}</h3>
-            <p>${featured.body}</p>
+            <div class="capability-feature-body">
+              <h3>${featured.title}</h3>
+              <p>${featured.body}</p>
+            </div>
           </article>
-          <div class="capability-list capability-rail">
+          <div class="capability-list capability-grid">
             ${rest
               .map(
                 (item, index) => `
