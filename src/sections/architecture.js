@@ -1,10 +1,13 @@
 export function renderArchitecture(content) {
   const layers = content.layers
     .map(
-      (item, index) => `
-        <article class="architecture-node architecture-node-${index % 2 === 0 ? 'left' : 'right'} reveal">
-          <span class="layer-tag">${item.tag}</span>
-          <div class="architecture-node-body">
+      (item) => `
+        <article class="architecture-card reveal">
+          <div class="architecture-card-head">
+            <span class="layer-tag">${item.tag}</span>
+            <span class="architecture-connector" aria-hidden="true"></span>
+          </div>
+          <div class="architecture-card-body">
             <h3>${item.title}</h3>
             <p>${item.body}</p>
           </div>
@@ -21,10 +24,7 @@ export function renderArchitecture(content) {
           <h2>${content.title}</h2>
           <p>${content.description}</p>
         </div>
-        <div class="architecture-board reveal">
-          <div class="architecture-spine" aria-hidden="true"></div>
-          ${layers}
-        </div>
+        <div class="architecture-board architecture-track reveal">${layers}</div>
       </div>
     </section>
   `

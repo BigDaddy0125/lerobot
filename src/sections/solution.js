@@ -1,8 +1,23 @@
 export function renderSolution(content) {
-  const items = content.items
+  const [lead, ...rest] = content.items
+
+  const feature = `
+    <article class="problem-feature reveal">
+      <div class="problem-feature-head">
+        <span class="problem-index">${lead.index}</span>
+        <p class="problem-feature-kicker">${content.eyebrow}</p>
+      </div>
+      <div class="problem-feature-body">
+        <h3>${lead.title}</h3>
+        <p>${lead.body}</p>
+      </div>
+    </article>
+  `
+
+  const items = rest
     .map(
       (item) => `
-        <article class="problem-lane reveal">
+        <article class="problem-compact reveal">
           <div class="problem-lane-head">
             <span class="problem-index">${item.index}</span>
             <span class="problem-lane-line" aria-hidden="true"></span>
@@ -24,7 +39,10 @@ export function renderSolution(content) {
           <h2>${content.title}</h2>
           <p>${content.description}</p>
         </div>
-        <div class="problem-lanes">${items}</div>
+        <div class="problem-composition">
+          ${feature}
+          <div class="problem-stack">${items}</div>
+        </div>
       </div>
     </section>
   `
