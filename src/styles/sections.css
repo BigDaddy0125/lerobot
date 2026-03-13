@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  padding: 20px 0 18px;
+  padding: 12px 0 10px;
   min-height: auto;
 }
 
@@ -16,7 +16,7 @@
 .hero-grid {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
-  gap: 22px;
+  gap: 18px;
   align-items: start;
 }
 
@@ -39,11 +39,11 @@
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
-  margin-top: 22px;
+  margin-top: 16px;
 }
 
 .hero-metrics {
-  margin: 18px 0 0;
+  margin: 14px 0 0;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
@@ -97,8 +97,8 @@
 
 .signal-summary {
   display: grid;
-  gap: 12px;
-  margin-bottom: 10px;
+  gap: 8px;
+  margin-bottom: 8px;
 }
 
 .signal-summary-head {
@@ -139,7 +139,7 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .signal-detail-card {
@@ -183,8 +183,8 @@
 .strip-grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 20px;
-  padding: 24px;
+  gap: 16px;
+  padding: 18px;
 }
 
 .strip-grid h2 {
@@ -199,14 +199,14 @@
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 16px;
-  margin-top: 10px;
+  margin-top: 6px;
 }
 
 .problem-feature,
 .problem-compact {
   display: grid;
-  gap: 14px;
-  padding: 22px;
+  gap: 10px;
+  padding: 18px;
   border-radius: var(--radius-xl);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015)),
@@ -242,7 +242,7 @@
 
 .problem-stack {
   display: grid;
-  gap: 14px;
+  gap: 10px;
 }
 
 .problem-lane-head {
@@ -287,12 +287,12 @@
 
 .architecture-flow {
   display: grid;
-  gap: 10px;
+  gap: 8px;
 }
 
 .architecture-board {
   border-radius: var(--radius-xl);
-  padding: 22px;
+  padding: 18px;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.015)),
     var(--panel);
@@ -303,7 +303,7 @@
 .architecture-track {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
+  gap: 10px;
 }
 
 .layer-tag {
@@ -321,7 +321,7 @@
 
 .architecture-card {
   display: grid;
-  gap: 12px;
+  gap: 8px;
 }
 
 .architecture-card-head {
@@ -337,7 +337,7 @@
 }
 
 .architecture-card-body {
-  padding: 16px 16px 18px;
+  padding: 14px;
   border-radius: 18px;
   border: 1px solid rgba(171, 191, 212, 0.12);
   background: rgba(255, 255, 255, 0.03);
@@ -354,12 +354,12 @@
 .capability-stage {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 14px;
+  gap: 10px;
   align-items: start;
 }
 
 .capability-feature {
-  padding: 22px;
+  padding: 18px;
   border-radius: var(--radius-xl);
   background:
     radial-gradient(circle at 80% 12%, rgba(87, 216, 209, 0.16), transparent 28%),
@@ -372,7 +372,7 @@
 .capability-feature-compact {
   display: grid;
   grid-template-columns: 140px 1fr;
-  gap: 18px;
+  gap: 14px;
   align-items: start;
 }
 
@@ -396,15 +396,15 @@
 
 .capability-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px 18px;
+  gap: 10px 12px;
 }
 
 .capability-row {
   display: grid;
   grid-template-columns: 56px 1fr;
-  gap: 18px;
+  gap: 14px;
   align-items: start;
-  padding: 16px 18px;
+  padding: 14px;
   border: 1px solid rgba(171, 191, 212, 0.12);
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.025);
@@ -426,7 +426,7 @@
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-auto-rows: auto;
-  gap: 10px;
+  gap: 8px;
 }
 
 .showcase-card,
@@ -434,7 +434,7 @@
 .tag-panel,
 .safety-card,
 .profile-card {
-  padding: 18px;
+  padding: 14px;
   border-radius: var(--radius-lg);
   background: var(--panel);
   border: 1px solid var(--line);
@@ -476,12 +476,12 @@
 .usecase-columns {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
+  gap: 8px;
   align-items: start;
 }
 
 .usecase-column {
-  padding: 20px;
+  padding: 16px;
   border-radius: 24px;
   border: 1px solid var(--line);
   background:
@@ -491,11 +491,11 @@
 }
 
 .usecase-column-2 {
-  transform: translateY(8px);
+  transform: none;
 }
 
 .usecase-column-3 {
-  transform: translateY(16px);
+  transform: none;
 }
 
 .usecase-column-top {
@@ -503,7 +503,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
 }
 
 .usecase-column-index {
@@ -534,22 +534,22 @@
   position: relative;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
+  gap: 10px;
 }
 
 .timeline-item {
-  padding: 18px;
+  padding: 14px;
   border-radius: 20px;
 }
 
 .trust-stage {
   display: grid;
   grid-template-columns: 0.92fr 1.08fr;
-  gap: 12px;
+  gap: 10px;
 }
 
 .trust-manifesto {
-  padding: 22px;
+  padding: 18px;
   border-radius: var(--radius-xl);
   background:
     radial-gradient(circle at 80% 10%, rgba(184, 242, 140, 0.1), transparent 28%),
@@ -569,11 +569,11 @@
 
 .trust-composition {
   display: grid;
-  gap: 12px;
+  gap: 8px;
 }
 
 .trust-lead {
-  padding: 20px 22px;
+  padding: 16px;
   border-radius: var(--radius-xl);
   border: 1px solid var(--line);
   background:
@@ -586,18 +586,18 @@
   font-family: var(--font-display);
   font-size: clamp(1.28rem, 1.6vw, 1.72rem);
   line-height: 1.04;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .trust-list {
   display: grid;
-  gap: 10px;
-  padding: 10px 0 0;
+  gap: 8px;
+  padding: 8px 0 0;
   border-top: 1px solid rgba(171, 191, 212, 0.14);
 }
 
 .trust-point {
-  padding: 0 0 10px 16px;
+  padding: 0 0 8px 12px;
   border-left: 1px solid rgba(171, 191, 212, 0.18);
   border-radius: 0;
   background: transparent;
@@ -606,19 +606,19 @@
 .contact-panel {
   display: grid;
   grid-template-columns: 1.08fr 0.92fr;
-  gap: 18px;
+  gap: 12px;
   align-items: stretch;
   border-radius: var(--radius-xl);
-  padding: 22px;
+  padding: 18px;
 }
 
 .contact-side {
   display: grid;
-  gap: 18px;
+  gap: 12px;
 }
 
 .contact-note {
-  padding: 18px;
+  padding: 14px;
   border-radius: 20px;
   border: 1px solid rgba(171, 191, 212, 0.14);
   background: rgba(255, 255, 255, 0.03);
@@ -628,18 +628,18 @@
 .safety-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  gap: 10px;
 }
 
 .tag-panel-grid,
 .profile-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
+  gap: 10px;
 }
 
 .feature-list {
-  margin: 16px 0 0;
+  margin: 10px 0 0;
   padding-left: 18px;
   color: var(--text-soft);
   line-height: 1.8;
@@ -649,7 +649,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 18px;
+  margin-top: 10px;
 }
 
 .tag-cloud span {
@@ -751,7 +751,7 @@
   }
 
   .section {
-    padding: 42px 0;
+    padding: 28px 0;
   }
 
   .signal-card,
@@ -761,14 +761,14 @@
   .capability-feature,
   .trust-manifesto,
   .trust-lead {
-    padding: 18px;
+    padding: 14px;
   }
 
   .problem-feature,
   .problem-compact,
   .capability-feature-compact,
   .usecase-column {
-    padding: 18px;
+    padding: 14px;
     grid-template-columns: 1fr;
   }
 
@@ -778,12 +778,7 @@
   .tag-panel,
   .safety-card,
   .profile-card {
-    padding: 20px;
-  }
-
-  .usecase-column-2,
-  .usecase-column-3 {
-    transform: none;
+    padding: 14px;
   }
 
   .footer-inner {
