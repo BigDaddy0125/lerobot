@@ -1,0 +1,20 @@
+{
+  "name": "lerobot",
+  "version": "1.0.0",
+  "description": "Landing site for Ishitake remote support robot and robotic arm development business.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "extract-docs": "node scripts/extract-docs.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "mammoth": "^1.12.0",
+    "pdf-parse": "^2.4.5",
+    "vite": "^8.0.0"
+  }
+}
