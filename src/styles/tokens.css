@@ -16,8 +16,8 @@
   --radius-lg: 24px;
   --radius-md: 16px;
   --container: min(1180px, calc(100% - 40px));
-  --font-body: "Plus Jakarta Sans", "IBM Plex Sans JP", sans-serif;
-  --font-display: "Plus Jakarta Sans", "IBM Plex Sans JP", sans-serif;
-  --font-brand: "Cormorant Garamond", "Noto Serif JP", serif;
+  --font-body: "IBM Plex Sans JP", "Plus Jakarta Sans", sans-serif;
+  --font-display: "IBM Plex Sans JP", "Plus Jakarta Sans", sans-serif;
+  --font-brand: "IBM Plex Sans JP", "Plus Jakarta Sans", sans-serif;
   --font-ui: "Plus Jakarta Sans", "IBM Plex Sans JP", sans-serif;
 }

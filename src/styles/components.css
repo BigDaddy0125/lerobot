@@ -43,9 +43,10 @@
 
 .brand-copy strong {
   font-family: var(--font-brand);
-  font-size: 1.3rem;
-  line-height: 1;
-  font-weight: 600;
+  font-size: 1.18rem;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  font-weight: 700;
 }
 
 .brand-copy small,
