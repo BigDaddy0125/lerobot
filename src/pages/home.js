@@ -12,28 +12,32 @@ import { renderFoundation } from '../sections/foundation'
 import { renderContact } from '../sections/contact'
 import { renderShowcase } from '../sections/showcase'
 
-export function renderHomePage() {
+export function renderHomePage(locale) {
+  const global = globalContent[locale]
+  const content = homeContent[locale]
+
   const mainContent = `
     <main id="top">
-      ${renderHero(homeContent.hero)}
-      ${renderIntro(homeContent.intro)}
-      ${renderSolution(homeContent.solution)}
-      ${renderArchitecture(homeContent.architecture)}
-      ${renderCapabilities(homeContent.capabilities)}
-      ${renderShowcase(homeContent.showcase)}
-      ${renderUseCases(homeContent.useCases)}
-      ${renderProcess(homeContent.process)}
-      ${renderFoundation(homeContent.foundation)}
-      ${renderContact(homeContent.contact)}
+      ${renderHero(content.hero, locale)}
+      ${renderIntro(content.intro)}
+      ${renderSolution(content.solution)}
+      ${renderArchitecture(content.architecture)}
+      ${renderCapabilities(content.capabilities)}
+      ${renderShowcase(content.showcase)}
+      ${renderUseCases(content.useCases)}
+      ${renderProcess(content.process)}
+      ${renderFoundation(content.foundation)}
+      ${renderContact(content.contact, locale)}
     </main>
   `
 
   return {
     html: renderLayout({
-      ...globalContent,
+      ...global,
       activePath: '/index.html',
+      locale,
       mainContent,
     }),
-    seo: homeContent.seo,
+    seo: content.seo,
   }
 }

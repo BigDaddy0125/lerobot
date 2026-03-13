@@ -9,11 +9,11 @@ html {
 body {
   margin: 0;
   color: var(--text);
-  font-family: "IBM Plex Sans JP", sans-serif;
+  font-family: var(--font-body);
   background:
-    radial-gradient(circle at 10% 10%, rgba(74, 215, 209, 0.16), transparent 30%),
-    radial-gradient(circle at 90% 12%, rgba(159, 245, 130, 0.12), transparent 22%),
-    linear-gradient(180deg, #0a121d 0%, #09111b 42%, #050a11 100%);
+    radial-gradient(circle at 12% 10%, rgba(87, 216, 209, 0.18), transparent 30%),
+    radial-gradient(circle at 84% 14%, rgba(227, 190, 118, 0.12), transparent 26%),
+    linear-gradient(180deg, #0b1420 0%, #08111c 42%, #050a10 100%);
 }
 
 body::before {
@@ -22,10 +22,10 @@ body::before {
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.026) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.026) 1px, transparent 1px);
   background-size: 72px 72px;
-  mask-image: radial-gradient(circle at center, black 35%, transparent 78%);
+  mask-image: radial-gradient(circle at center, black 34%, transparent 78%);
   opacity: 0.24;
 }
 
@@ -59,27 +59,30 @@ dd {
 }
 
 .section {
-  padding: 112px 0;
+  padding: 120px 0;
 }
 
 .eyebrow {
   margin-bottom: 18px;
   color: var(--accent-2);
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 0.84rem;
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
 
 .section-heading {
-  max-width: 720px;
-  margin-bottom: 32px;
+  max-width: 760px;
+  margin-bottom: 36px;
 }
 
 .section-heading h2 {
-  font-size: clamp(2rem, 3vw, 3.2rem);
-  line-height: 1.08;
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 3.6vw, 4rem);
+  line-height: 1.02;
   letter-spacing: -0.03em;
+  font-weight: 600;
 }
 
 .section-heading p,
@@ -93,7 +96,14 @@ dd {
 .timeline-item p,
 .trust-list p,
 .contact-panel p,
-.site-footer p {
+.site-footer p,
+.deep-card p,
+.showcase-card p,
+.profile-card p,
+.safety-card p,
+.tag-panel p,
+.signal-lead-block p,
+.contact-note p {
   color: var(--text-soft);
   line-height: 1.8;
 }

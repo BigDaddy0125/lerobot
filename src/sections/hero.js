@@ -1,8 +1,10 @@
-function renderAction(action) {
-  return `<a class="button button-${action.variant}" href="${action.href}">${action.label}</a>`
+import { buildLocalizedHref } from '../utils/locale'
+
+function renderAction(action, locale) {
+  return `<a class="button button-${action.variant}" href="${buildLocalizedHref(action.href, locale)}">${action.label}</a>`
 }
 
-export function renderHero(content) {
+export function renderHero(content, locale) {
   const metrics = content.metrics
     .map(
       (item) => `
@@ -16,9 +18,9 @@ export function renderHero(content) {
 
   const blueprint = content.blueprint
     .map(
-      (item) => `
-        <article>
-          <h2>${item.title}</h2>
+      (item, index) => `
+        <article class="signal-entry signal-entry-${index + 1}">
+          <p class="signal-entry-kicker">${item.title}</p>
           <p>${item.body}</p>
         </article>
       `,
@@ -35,16 +37,23 @@ export function renderHero(content) {
           <p class="eyebrow">${content.eyebrow}</p>
           <h1>${content.title}</h1>
           <p class="hero-lead">${content.lead}</p>
-          <div class="hero-actions">${content.actions.map(renderAction).join('')}</div>
+          <div class="hero-actions">${content.actions.map((action) => renderAction(action, locale)).join('')}</div>
           <dl class="hero-metrics">${metrics}</dl>
         </div>
         <div class="hero-panel reveal">
           <div class="signal-card">
-            <div class="signal-head">
-              <span class="signal-pill is-live">System Blueprint</span>
-              <span class="signal-pill">Prototype Ready</span>
+            <div class="signal-frame">
+              <div class="signal-frame-head">
+                <span class="signal-pill is-live">${content.panel.liveLabel}</span>
+                <span class="signal-pill">${content.panel.statusLabel}</span>
+              </div>
+              <div class="signal-lead-block">
+                <p class="signal-overline">${content.panel.overline}</p>
+                <h2>${content.panel.title}</h2>
+                <p>${content.panel.body}</p>
+              </div>
             </div>
-            <div class="signal-grid">${blueprint}</div>
+            <div class="signal-grid signal-grid-layered">${blueprint}</div>
             <div class="system-diagram" aria-hidden="true">${diagram}</div>
           </div>
         </div>

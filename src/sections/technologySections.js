@@ -1,4 +1,4 @@
-export function renderTechSystems(systems) {
+export function renderTechSystems(systems, section) {
   const cards = systems
     .map(
       (item) => `
@@ -17,9 +17,9 @@ export function renderTechSystems(systems) {
     <section class="section">
       <div class="container">
         <div class="section-heading reveal">
-          <p class="eyebrow">System Layers</p>
-          <h2>価値に紐づく技術レイヤー。</h2>
-          <p>Boston Dynamics や Agility のように、構成そのものではなく「何のための構成か」が伝わる技術ページを目指しています。</p>
+          <p class="eyebrow">${section.eyebrow}</p>
+          <h2>${section.title}</h2>
+          <p>${section.body}</p>
         </div>
         <div class="deep-grid">${cards}</div>
       </div>
@@ -27,7 +27,7 @@ export function renderTechSystems(systems) {
   `
 }
 
-export function renderTagCloud(groups) {
+export function renderTagCloud(groups, section) {
   const cards = groups
     .map(
       (group) => `
@@ -45,8 +45,9 @@ export function renderTagCloud(groups) {
     <section class="section tinted-section">
       <div class="container">
         <div class="section-heading reveal">
-          <p class="eyebrow">Stack</p>
-          <h2>採用可能な技術スタック。</h2>
+          <p class="eyebrow">${section.eyebrow}</p>
+          <h2>${section.title}</h2>
+          <p>${section.body}</p>
         </div>
         <div class="tag-panel-grid">${cards}</div>
       </div>
@@ -54,7 +55,7 @@ export function renderTagCloud(groups) {
   `
 }
 
-export function renderSafety(items) {
+export function renderSafety(items, section) {
   const cards = items
     .map(
       (item) => `
@@ -70,9 +71,9 @@ export function renderSafety(items) {
     <section class="section">
       <div class="container">
         <div class="section-heading reveal">
-          <p class="eyebrow">Safety</p>
-          <h2>ハード設計から始める安全性。</h2>
-          <p>遠隔支援や軽作業支援では、制御ロジックだけでなく、機構そのものが安全哲学を持つ必要があります。</p>
+          <p class="eyebrow">${section.eyebrow}</p>
+          <h2>${section.title}</h2>
+          <p>${section.body}</p>
         </div>
         <div class="safety-grid">${cards}</div>
       </div>

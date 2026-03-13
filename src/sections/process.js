@@ -17,8 +17,12 @@ export function renderProcess(content) {
         <div class="section-heading reveal">
           <p class="eyebrow">${content.eyebrow}</p>
           <h2>${content.title}</h2>
+          <p>${content.description}</p>
         </div>
-        <div class="timeline">${items}</div>
+        <div class="timeline-wrap">
+          <div class="timeline-line" aria-hidden="true"></div>
+          <div class="timeline">${items}</div>
+        </div>
       </div>
     </section>
   `

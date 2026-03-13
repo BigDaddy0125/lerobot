@@ -2,6 +2,7 @@ import '../styles/index.css'
 import { setupMenu } from '../utils/menu'
 import { setupReveal } from '../utils/reveal'
 import { applySeo } from '../utils/seo'
+import { getLocaleFromUrl } from '../utils/locale'
 
 window.__LEROBOT_RENDER_PAGE__ = (renderPage) => {
   const app = document.querySelector('#app')
@@ -10,9 +11,10 @@ window.__LEROBOT_RENDER_PAGE__ = (renderPage) => {
     return
   }
 
-  const page = renderPage()
+  const locale = getLocaleFromUrl()
+  const page = renderPage(locale)
   app.innerHTML = page.html
-  applySeo(page.seo)
+  applySeo(page.seo, locale)
   setupMenu()
   setupReveal()
 }

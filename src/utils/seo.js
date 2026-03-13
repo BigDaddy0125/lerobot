@@ -1,5 +1,6 @@
-export function applySeo(seo) {
+export function applySeo(seo, locale) {
   document.title = seo.title
+  document.documentElement.lang = locale
 
   const ensureMeta = (name, content, attribute = 'name') => {
     let meta = document.head.querySelector(`meta[${attribute}="${name}"]`)
@@ -16,5 +17,5 @@ export function applySeo(seo) {
   ensureMeta('og:title', seo.title, 'property')
   ensureMeta('og:description', seo.description, 'property')
   ensureMeta('og:type', 'website', 'property')
-  ensureMeta('og:locale', 'ja_JP', 'property')
+  ensureMeta('og:locale', locale === 'ja' ? 'ja_JP' : 'en_US', 'property')
 }

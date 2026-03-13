@@ -4,22 +4,26 @@ import { technologyContent } from '../content/technologyContent'
 import { renderHero } from '../sections/hero'
 import { renderTechSystems, renderTagCloud, renderSafety } from '../sections/technologySections'
 
-export function renderTechnologyPage() {
+export function renderTechnologyPage(locale) {
+  const global = globalContent[locale]
+  const content = technologyContent[locale]
+
   const mainContent = `
     <main id="top">
-      ${renderHero(technologyContent.hero)}
-      ${renderTechSystems(technologyContent.systems)}
-      ${renderTagCloud(technologyContent.stackGroups)}
-      ${renderSafety(technologyContent.safety)}
+      ${renderHero(content.hero, locale)}
+      ${renderTechSystems(content.systems, content.systemSection)}
+      ${renderTagCloud(content.stackGroups, content.stackSection)}
+      ${renderSafety(content.safety, content.safetySection)}
     </main>
   `
 
   return {
     html: renderLayout({
-      ...globalContent,
+      ...global,
       activePath: '/technology.html',
+      locale,
       mainContent,
     }),
-    seo: technologyContent.seo,
+    seo: content.seo,
   }
 }
