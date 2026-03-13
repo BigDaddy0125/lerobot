@@ -1,4 +1,20 @@
 # lerobot
+## GitHub Pages
+
+This repository is configured for GitHub Pages project-site deployment:
+
+`https://bigdaddy0125.github.io/lerobot/`
+
+Setup on GitHub:
+
+1. Open `Settings > Pages`
+2. Set `Source` to `GitHub Actions`
+3. Push to `main` and wait for the `Deploy GitHub Pages` workflow to finish
+
+Notes:
+
+- Production builds use the `/lerobot/` base path automatically
+- Local development still runs from `/` with `npm run dev`
 
 石竹株式会社の「遠隔支援ロボット・機械腕開発」事業向け公式サイトです。
 
