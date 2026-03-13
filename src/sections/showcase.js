@@ -1,0 +1,25 @@
+export function renderShowcase(content) {
+  const items = content.items
+    .map(
+      (item) => `
+        <article class="showcase-card reveal">
+          <p class="showcase-meta">${item.meta}</p>
+          <h3>${item.title}</h3>
+          <p>${item.body}</p>
+        </article>
+      `,
+    )
+    .join('')
+
+  return `
+    <section class="section showcase-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">${content.eyebrow}</p>
+          <h2>${content.title}</h2>
+        </div>
+        <div class="showcase-grid">${items}</div>
+      </div>
+    </section>
+  `
+}

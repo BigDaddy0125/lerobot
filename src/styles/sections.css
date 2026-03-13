@@ -49,7 +49,12 @@
 .problem-grid,
 .capability-grid,
 .usecase-grid,
-.timeline {
+.timeline,
+.showcase-grid,
+.deep-grid,
+.tag-panel-grid,
+.safety-grid,
+.profile-grid {
   display: grid;
   gap: 16px;
 }
@@ -76,7 +81,9 @@
 .strip-label,
 .problem-index,
 .usecase-kicker,
-.timeline-item span {
+.timeline-item span,
+.showcase-meta,
+.profile-label {
   color: var(--accent-3);
   font-family: "Space Grotesk", sans-serif;
   font-size: 0.82rem;
@@ -135,8 +142,13 @@
 .capability-card,
 .usecase-card,
 .timeline-item,
-.trust-list div {
-  padding: 18px;
+.trust-list div,
+.showcase-card,
+.deep-card,
+.tag-panel,
+.safety-card,
+.profile-card {
+  padding: 22px;
   border-radius: 18px;
 }
 
@@ -146,9 +158,24 @@
 .usecase-card h3,
 .timeline-item h3,
 .layer h3,
-.trust-list h3 {
+.trust-list h3,
+.showcase-card h3,
+.deep-card h3,
+.tag-panel h3,
+.safety-card h3,
+.profile-card h3 {
   margin-bottom: 10px;
   font-size: 1.18rem;
+}
+
+.showcase-card,
+.deep-card,
+.tag-panel,
+.safety-card,
+.profile-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
 }
 
 .system-diagram {
@@ -215,6 +242,17 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.showcase-grid,
+.tag-panel-grid,
+.profile-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.deep-grid,
+.safety-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .timeline {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
@@ -232,6 +270,30 @@
   gap: 24px;
 }
 
+.feature-list {
+  margin: 16px 0 0;
+  padding-left: 18px;
+  color: var(--text-soft);
+  line-height: 1.8;
+}
+
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.tag-cloud span {
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(159, 181, 203, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-soft);
+  font-size: 0.9rem;
+}
+
+.tinted-section,
 .usecase-section {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent),
@@ -251,7 +313,12 @@
   .problem-grid,
   .capability-grid,
   .usecase-grid,
-  .timeline {
+  .timeline,
+  .showcase-grid,
+  .deep-grid,
+  .tag-panel-grid,
+  .safety-grid,
+  .profile-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -297,7 +364,12 @@
   .problem-grid,
   .capability-grid,
   .usecase-grid,
-  .timeline {
+  .timeline,
+  .showcase-grid,
+  .deep-grid,
+  .tag-panel-grid,
+  .safety-grid,
+  .profile-grid {
     grid-template-columns: 1fr;
   }
 
@@ -312,7 +384,12 @@
   .problem-card,
   .capability-card,
   .usecase-card,
-  .timeline-item {
+  .timeline-item,
+  .showcase-card,
+  .deep-card,
+  .tag-panel,
+  .safety-card,
+  .profile-card {
     padding: 20px;
   }
 

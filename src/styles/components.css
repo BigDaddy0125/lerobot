@@ -67,6 +67,10 @@
   color: var(--text);
 }
 
+.site-nav a[aria-current="page"] {
+  color: var(--text);
+}
+
 .nav-cta,
 .menu-toggle,
 .button-secondary {
@@ -131,4 +135,10 @@
   gap: 18px;
   padding-top: 18px;
   border-top: 1px solid rgba(159, 181, 203, 0.12);
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
 }
