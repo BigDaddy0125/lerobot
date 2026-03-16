@@ -1,11 +1,9 @@
 export function renderFoundation(content) {
-  const [lead, ...rest] = content.items
-
-  const items = rest
+  const items = content.items
     .map(
       (item, index) => `
         <div class="trust-point trust-point-card">
-          <span class="trust-point-index">0${index + 2}</span>
+          <span class="trust-point-index">0${index + 1}</span>
           <h3>${item.title}</h3>
           <p>${item.body}</p>
         </div>
@@ -20,14 +18,14 @@ export function renderFoundation(content) {
           <p class="eyebrow">${content.eyebrow}</p>
           <h2>${content.title}</h2>
           <p>${content.lead}</p>
+          <div class="trust-glance">
+            ${content.items
+              .map((item, index) => `<span>0${index + 1} ${item.title}</span>`)
+              .join('')}
+          </div>
         </div>
-        <div class="trust-composition">
-          <article class="trust-lead trust-lead-editorial reveal">
-            <span class="trust-point-index">01</span>
-            <h3>${lead.title}</h3>
-            <p>${lead.body}</p>
-          </article>
-          <div class="trust-list reveal">${items}</div>
+        <div class="trust-grid reveal">
+          ${items}
         </div>
       </div>
     </section>

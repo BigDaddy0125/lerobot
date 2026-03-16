@@ -289,9 +289,10 @@
 
 .scope-manifesto {
   display: grid;
-  gap: 14px;
-  min-height: 100%;
-  padding: 26px;
+  align-content: start;
+  gap: 18px;
+  min-height: 0;
+  padding: 24px;
   border-radius: 34px;
   border: 1px solid rgba(179, 195, 214, 0.08);
   background:
@@ -322,7 +323,9 @@
 .scope-manifesto p:last-child {
   margin-bottom: 0;
   color: var(--text-soft);
-  line-height: 1.75;
+  font-size: 1.04rem;
+  line-height: 1.8;
+  max-width: 30ch;
 }
 
 .scope-rail {
@@ -725,51 +728,34 @@
   font-weight: 700;
 }
 
-.trust-composition {
+.trust-manifesto-editorial > p:last-of-type {
+  margin-bottom: 0;
+  color: var(--text-soft);
+  line-height: 1.8;
+  max-width: 32ch;
+}
+
+.trust-glance {
   display: grid;
-  gap: 8px;
+  gap: 10px;
+  margin-top: 8px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(171, 191, 212, 0.12);
 }
 
-.trust-lead {
-  padding: 16px;
-  border-radius: var(--radius-xl);
-  border: 1px solid var(--line);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015)),
-    var(--panel);
-  box-shadow: var(--shadow);
+.trust-glance span {
+  color: rgba(237, 243, 248, 0.82);
+  font-family: var(--font-ui);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
 }
 
-.trust-lead-editorial {
+.trust-grid {
   display: grid;
-  gap: 12px;
-  border-radius: 28px;
-}
-
-.trust-lead h3 {
-  font-family: var(--font-display);
-  font-size: clamp(1.28rem, 1.6vw, 1.72rem);
-  line-height: 1.04;
-  margin-bottom: 8px;
-}
-
-.trust-list {
-  display: grid;
-  gap: 8px;
-  padding: 8px 0 0;
-  border-top: 1px solid rgba(171, 191, 212, 0.14);
-}
-
-.trust-point {
-  padding: 0 0 8px 12px;
-  border-left: 1px solid rgba(171, 191, 212, 0.18);
-  border-radius: 0;
-  background: transparent;
-}
-
-.trust-list {
-  gap: 12px;
-  padding-top: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  align-items: stretch;
 }
 
 .trust-point-index {
@@ -789,6 +775,12 @@
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015)),
     rgba(10, 17, 26, 0.72);
+}
+
+.trust-point-card p:last-child {
+  margin-bottom: 0;
+  color: var(--text-soft);
+  line-height: 1.75;
 }
 
 .contact-panel {
@@ -1001,6 +993,7 @@
   .tag-panel-grid,
   .safety-grid,
   .profile-grid,
+  .trust-grid,
   .process-track {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1084,6 +1077,7 @@
   .tag-panel-grid,
   .safety-grid,
   .profile-grid,
+  .trust-grid,
   .process-track {
     grid-template-columns: 1fr;
   }
@@ -1101,8 +1095,7 @@
   .contact-panel,
   .intro-strip,
   .architecture-board,
-  .trust-manifesto,
-  .trust-lead {
+  .trust-manifesto {
     padding: 14px;
   }
 

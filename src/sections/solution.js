@@ -16,15 +16,14 @@ export function renderSolution(content) {
   return `
     <section id="solution" class="section">
       <div class="container">
-        <div class="section-heading split reveal">
+        <div class="section-heading compact reveal">
           <p class="eyebrow">${content.eyebrow}</p>
           <h2>${content.title}</h2>
           <p>${content.description}</p>
         </div>
         <div class="scope-stage">
           <article class="scope-manifesto reveal">
-            <p class="scope-manifesto-kicker">${content.eyebrow}</p>
-            <h3>${content.title}</h3>
+            <p class="scope-manifesto-kicker">System Premise</p>
             <p>${content.description}</p>
           </article>
           <div class="scope-rail">
