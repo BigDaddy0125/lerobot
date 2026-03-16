@@ -19,15 +19,23 @@ export function renderHomePage(locale) {
   const mainContent = `
     <main id="top">
       ${renderHero(content.hero, locale)}
-      ${renderIntro(content.intro)}
-      ${renderSolution(content.solution)}
-      ${renderArchitecture(content.architecture)}
-      ${renderCapabilities(content.capabilities)}
-      ${renderShowcase(content.showcase)}
-      ${renderUseCases(content.useCases)}
-      ${renderProcess(content.process)}
-      ${renderFoundation(content.foundation)}
-      ${renderContact(content.contact, locale)}
+      <section class="page-band page-band-intro">
+        ${renderIntro(content.intro)}
+        ${renderSolution(content.solution)}
+      </section>
+      <section class="page-band page-band-system">
+        ${renderArchitecture(content.architecture)}
+        ${renderCapabilities(content.capabilities)}
+      </section>
+      <section class="page-band page-band-proof">
+        ${renderShowcase(content.showcase)}
+        ${renderUseCases(content.useCases)}
+      </section>
+      <section class="page-band page-band-close">
+        ${renderProcess(content.process)}
+        ${renderFoundation(content.foundation)}
+        ${renderContact(content.contact, locale)}
+      </section>
     </main>
   `
 
