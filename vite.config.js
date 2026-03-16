@@ -2,7 +2,7 @@ const path = require('path')
 const { defineConfig } = require('vite')
 
 module.exports = defineConfig({
-  base: '/lerobot/',
+  base: '/',
   server: {
     host: '0.0.0.0',
     port: 5173,
