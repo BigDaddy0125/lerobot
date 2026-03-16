@@ -1,14 +1,29 @@
 export function renderUseCases(content) {
-  const items = content.items
+  const [lead, ...rest] = content.items
+
+  const feature = `
+    <article class="usecase-feature-band reveal">
+      <div class="usecase-feature-top">
+        <p class="usecase-kicker">${lead.kicker}</p>
+        <span class="usecase-column-index">01</span>
+      </div>
+      <h3>${lead.title}</h3>
+      <p>${lead.body}</p>
+    </article>
+  `
+
+  const items = rest
     .map(
       (item, index) => `
-        <article class="usecase-column usecase-column-${index + 1} reveal">
-          <div class="usecase-column-top">
-            <p class="usecase-kicker">${item.kicker}</p>
-            <span class="usecase-column-index">0${index + 1}</span>
+        <article class="usecase-list-row reveal">
+          <div class="usecase-list-label">
+            <span>0${index + 2}</span>
+            <p>${item.kicker}</p>
           </div>
-          <h3>${item.title}</h3>
-          <p>${item.body}</p>
+          <div class="usecase-list-copy">
+            <h3>${item.title}</h3>
+            <p>${item.body}</p>
+          </div>
         </article>
       `,
     )
@@ -22,7 +37,12 @@ export function renderUseCases(content) {
           <h2>${content.title}</h2>
           <p>${content.description}</p>
         </div>
-        <div class="usecase-columns">${items}</div>
+        <div class="usecase-editorial">
+          ${feature}
+          <div class="usecase-list">
+            ${items}
+          </div>
+        </div>
       </div>
     </section>
   `

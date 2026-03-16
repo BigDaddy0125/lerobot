@@ -1,28 +1,10 @@
 export function renderSolution(content) {
-  const [lead, ...rest] = content.items
-
-  const feature = `
-    <article class="problem-feature reveal">
-      <div class="problem-feature-head">
-        <span class="problem-index">${lead.index}</span>
-        <p class="problem-feature-kicker">${content.eyebrow}</p>
-      </div>
-      <div class="problem-feature-body">
-        <h3>${lead.title}</h3>
-        <p>${lead.body}</p>
-      </div>
-    </article>
-  `
-
-  const items = rest
+  const items = content.items
     .map(
       (item) => `
-        <article class="problem-compact reveal">
-          <div class="problem-lane-head">
-            <span class="problem-index">${item.index}</span>
-            <span class="problem-lane-line" aria-hidden="true"></span>
-          </div>
-          <div class="problem-lane-body">
+        <article class="scope-rail-item reveal">
+          <div class="scope-rail-index">${item.index}</div>
+          <div class="scope-rail-copy">
             <h3>${item.title}</h3>
             <p>${item.body}</p>
           </div>
@@ -39,9 +21,15 @@ export function renderSolution(content) {
           <h2>${content.title}</h2>
           <p>${content.description}</p>
         </div>
-        <div class="problem-composition">
-          ${feature}
-          <div class="problem-stack">${items}</div>
+        <div class="scope-stage">
+          <article class="scope-manifesto reveal">
+            <p class="scope-manifesto-kicker">${content.eyebrow}</p>
+            <h3>${content.title}</h3>
+            <p>${content.description}</p>
+          </article>
+          <div class="scope-rail">
+            ${items}
+          </div>
         </div>
       </div>
     </section>

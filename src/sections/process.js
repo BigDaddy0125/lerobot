@@ -1,22 +1,12 @@
 export function renderProcess(content) {
-  const [lead, ...rest] = content.items
-
-  const featured = `
-    <article class="process-lead reveal">
-      <p class="process-kicker">${lead.phase}</p>
-      <h3>${lead.title}</h3>
-      <p>${lead.body}</p>
-    </article>
-  `
-
-  const items = rest
+  const items = content.items
     .map(
       (item, index) => `
-        <article class="process-card reveal">
-          <div class="process-card-top">
-            <span>${item.phase}</span>
-            <strong>0${index + 2}</strong>
+        <article class="process-step reveal">
+          <div class="process-step-node">
+            <span>0${index + 1}</span>
           </div>
+          <p class="process-kicker">${item.phase}</p>
           <h3>${item.title}</h3>
           <p>${item.body}</p>
         </article>
@@ -32,9 +22,9 @@ export function renderProcess(content) {
           <h2>${content.title}</h2>
           <p>${content.description}</p>
         </div>
-        <div class="process-board">
-          ${featured}
-          <div class="process-grid">
+        <div class="process-track-shell">
+          <div class="process-track-line" aria-hidden="true"></div>
+          <div class="process-track">
             ${items}
           </div>
         </div>
