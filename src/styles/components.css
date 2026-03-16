@@ -13,12 +13,12 @@
   align-items: center;
   gap: 18px;
   padding: 12px 18px;
-  border: 1px solid rgba(179, 195, 214, 0.1);
+  border: 1px solid rgba(216, 199, 177, 0.12);
   border-radius: 999px;
   background:
-    linear-gradient(180deg, rgba(10, 16, 24, 0.8), rgba(10, 16, 24, 0.68)),
-    rgba(6, 11, 18, 0.64);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
+    linear-gradient(180deg, rgba(28, 21, 17, 0.82), rgba(24, 18, 15, 0.72)),
+    rgba(17, 13, 11, 0.66);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.22);
 }
 
 .brand {
@@ -33,12 +33,12 @@
   border-radius: 14px;
   display: grid;
   place-items: center;
-  color: #051019;
+  color: #1a120d;
   font-family: var(--font-ui);
   font-size: 1rem;
   font-weight: 800;
-  background: linear-gradient(145deg, #8feae4, #eef8f8);
-  box-shadow: 0 0 24px rgba(117, 230, 222, 0.16);
+  background: linear-gradient(145deg, #d9bb90, #f5e6d0);
+  box-shadow: 0 0 24px rgba(198, 154, 94, 0.14);
 }
 
 .brand-copy {
@@ -72,8 +72,8 @@
   margin: 0;
   padding: 8px 12px;
   border-radius: 999px;
-  border: 1px solid rgba(179, 195, 214, 0.1);
-  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(216, 199, 177, 0.1);
+  background: rgba(255, 245, 233, 0.028);
   color: var(--text-soft);
   font-family: var(--font-ui);
   font-size: 0.72rem;
@@ -86,7 +86,7 @@
   padding: 4px;
   border-radius: 999px;
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.025);
+  background: rgba(255, 245, 233, 0.028);
 }
 
 .locale-switch a {
@@ -98,7 +98,7 @@
 }
 
 .locale-switch a[aria-current="page"] {
-  background: linear-gradient(135deg, rgba(87, 216, 209, 0.18), rgba(227, 190, 118, 0.18));
+  background: linear-gradient(135deg, rgba(198, 154, 94, 0.2), rgba(234, 216, 192, 0.18));
   color: var(--text);
 }
 
@@ -118,14 +118,14 @@
 .site-nav a:hover,
 .site-nav a[aria-current="page"] {
   color: var(--text);
-  background: rgba(255, 255, 255, 0.035);
+  background: rgba(255, 245, 233, 0.04);
 }
 
 .nav-cta,
 .menu-toggle,
 .button-secondary {
   border: 1px solid var(--line-strong);
-  background: rgba(255, 255, 255, 0.025);
+  background: rgba(255, 245, 233, 0.028);
 }
 
 .nav-cta {
@@ -156,9 +156,9 @@
 }
 
 .button-primary {
-  color: #07131b;
-  background: linear-gradient(135deg, #8be8e0, #eaf9f8);
-  box-shadow: 0 12px 24px rgba(117, 230, 222, 0.16);
+  color: #1b120c;
+  background: linear-gradient(135deg, #c69a5e, #f1debf);
+  box-shadow: 0 12px 24px rgba(198, 154, 94, 0.2);
 }
 
 .signal-card,
@@ -181,7 +181,7 @@
 
 .footer-shell {
   padding: 24px 0 0;
-  border-top: 1px solid rgba(179, 195, 214, 0.08);
+  border-top: 1px solid rgba(216, 199, 177, 0.08);
 }
 
 .footer-inner {
@@ -213,7 +213,7 @@
 .footer-meta {
   margin-top: 18px;
   padding-top: 18px;
-  border-top: 1px solid rgba(179, 195, 214, 0.08);
+  border-top: 1px solid rgba(216, 199, 177, 0.08);
 }
 
 .footer-links {
@@ -225,8 +225,8 @@
 .footer-links a {
   padding: 10px 14px;
   border-radius: 999px;
-  border: 1px solid rgba(179, 195, 214, 0.08);
-  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(216, 199, 177, 0.08);
+  background: rgba(255, 245, 233, 0.026);
 }
 
 @media (max-width: 760px) {
