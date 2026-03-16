@@ -34,7 +34,7 @@ export function renderSolution(content) {
   return `
     <section id="solution" class="section">
       <div class="container">
-        <div class="section-heading reveal">
+        <div class="section-heading split reveal">
           <p class="eyebrow">${content.eyebrow}</p>
           <h2>${content.title}</h2>
           <p>${content.description}</p>

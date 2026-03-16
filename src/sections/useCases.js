@@ -17,7 +17,7 @@ export function renderUseCases(content) {
   return `
     <section id="use-cases" class="section usecase-section">
       <div class="container">
-        <div class="section-heading reveal">
+        <div class="section-heading split reveal">
           <p class="eyebrow">${content.eyebrow}</p>
           <h2>${content.title}</h2>
           <p>${content.description}</p>

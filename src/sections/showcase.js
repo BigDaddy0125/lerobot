@@ -14,7 +14,7 @@ export function renderShowcase(content) {
   return `
     <section class="section showcase-section">
       <div class="container">
-        <div class="section-heading reveal">
+        <div class="section-heading compact reveal">
           <p class="eyebrow">${content.eyebrow}</p>
           <h2>${content.title}</h2>
         </div>

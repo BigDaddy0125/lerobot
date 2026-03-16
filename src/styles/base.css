@@ -59,11 +59,11 @@ dd {
 }
 
 .section {
-  padding: 34px 0;
+  padding: clamp(22px, 4vw, 42px) 0;
 }
 
 .eyebrow {
-  margin-bottom: 18px;
+  margin-bottom: 10px;
   color: var(--accent-2);
   font-family: var(--font-ui);
   font-size: 0.8rem;
@@ -74,7 +74,50 @@ dd {
 
 .section-heading {
   max-width: 760px;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
+  display: grid;
+  gap: 10px;
+}
+
+.section-heading > * {
+  margin-bottom: 0;
+}
+
+.section-heading.compact {
+  max-width: 620px;
+}
+
+.section-heading.split,
+.section-heading.split-wide {
+  max-width: none;
+  grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.9fr);
+  align-items: end;
+  column-gap: clamp(20px, 4vw, 56px);
+}
+
+.section-heading.split .eyebrow,
+.section-heading.split-wide .eyebrow {
+  grid-column: 1 / -1;
+}
+
+.section-heading.split h2,
+.section-heading.split-wide h2 {
+  grid-column: 1;
+}
+
+.section-heading.split > p:last-child,
+.section-heading.split-wide > p:last-child {
+  grid-column: 2;
+  max-width: 44ch;
+}
+
+.section-shell {
+  padding: clamp(18px, 2.2vw, 28px);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(171, 191, 212, 0.12);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01)),
+    rgba(8, 15, 24, 0.45);
 }
 
 .section-heading h2 {

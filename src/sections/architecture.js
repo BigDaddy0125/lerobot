@@ -18,8 +18,8 @@ export function renderArchitecture(content) {
 
   return `
     <section id="architecture" class="section architecture-section">
-      <div class="container architecture-flow">
-        <div class="section-heading reveal">
+      <div class="container section-shell architecture-flow">
+        <div class="section-heading split reveal">
           <p class="eyebrow">${content.eyebrow}</p>
           <h2>${content.title}</h2>
           <p>${content.description}</p>

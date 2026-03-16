@@ -1,9 +1,24 @@
 export function renderTechSystems(systems, section) {
-  const cards = systems
+  const [featured, ...rest] = systems
+
+  const feature = `
+    <article class="system-feature reveal">
+      <p class="system-feature-kicker">${featured.title}</p>
+      <h3>${featured.body}</h3>
+      <ul class="feature-list">
+        ${featured.points.map((point) => `<li>${point}</li>`).join('')}
+      </ul>
+    </article>
+  `
+
+  const cards = rest
     .map(
-      (item) => `
-        <article class="deep-card reveal">
-          <h3>${item.title}</h3>
+      (item, index) => `
+        <article class="system-rail-card reveal">
+          <div class="system-rail-top">
+            <span>0${index + 2}</span>
+            <h3>${item.title}</h3>
+          </div>
           <p>${item.body}</p>
           <ul class="feature-list">
             ${item.points.map((point) => `<li>${point}</li>`).join('')}
@@ -16,12 +31,15 @@ export function renderTechSystems(systems, section) {
   return `
     <section class="section">
       <div class="container">
-        <div class="section-heading reveal">
+        <div class="section-heading split reveal">
           <p class="eyebrow">${section.eyebrow}</p>
           <h2>${section.title}</h2>
           <p>${section.body}</p>
         </div>
-        <div class="deep-grid">${cards}</div>
+        <div class="system-stage">
+          ${feature}
+          <div class="system-rail">${cards}</div>
+        </div>
       </div>
     </section>
   `
@@ -44,7 +62,7 @@ export function renderTagCloud(groups, section) {
   return `
     <section class="section tinted-section">
       <div class="container">
-        <div class="section-heading reveal">
+        <div class="section-heading split reveal">
           <p class="eyebrow">${section.eyebrow}</p>
           <h2>${section.title}</h2>
           <p>${section.body}</p>
@@ -70,7 +88,7 @@ export function renderSafety(items, section) {
   return `
     <section class="section">
       <div class="container">
-        <div class="section-heading reveal">
+        <div class="section-heading split reveal">
           <p class="eyebrow">${section.eyebrow}</p>
           <h2>${section.title}</h2>
           <p>${section.body}</p>

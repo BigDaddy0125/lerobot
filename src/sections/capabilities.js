@@ -4,7 +4,7 @@ export function renderCapabilities(content) {
   return `
     <section id="capabilities" class="section capabilities-section">
       <div class="container">
-        <div class="section-heading reveal">
+        <div class="section-heading split reveal">
           <p class="eyebrow">${content.eyebrow}</p>
           <h2>${content.title}</h2>
           <p>${content.description}</p>

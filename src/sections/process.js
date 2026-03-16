@@ -1,9 +1,22 @@
 export function renderProcess(content) {
-  const items = content.items
+  const [lead, ...rest] = content.items
+
+  const featured = `
+    <article class="process-lead reveal">
+      <p class="process-kicker">${lead.phase}</p>
+      <h3>${lead.title}</h3>
+      <p>${lead.body}</p>
+    </article>
+  `
+
+  const items = rest
     .map(
-      (item) => `
-        <article class="timeline-item reveal">
-          <span>${item.phase}</span>
+      (item, index) => `
+        <article class="process-card reveal">
+          <div class="process-card-top">
+            <span>${item.phase}</span>
+            <strong>0${index + 2}</strong>
+          </div>
           <h3>${item.title}</h3>
           <p>${item.body}</p>
         </article>
@@ -14,14 +27,16 @@ export function renderProcess(content) {
   return `
     <section id="process" class="section">
       <div class="container">
-        <div class="section-heading reveal">
+        <div class="section-heading split reveal">
           <p class="eyebrow">${content.eyebrow}</p>
           <h2>${content.title}</h2>
           <p>${content.description}</p>
         </div>
-        <div class="timeline-wrap">
-          <div class="timeline-line" aria-hidden="true"></div>
-          <div class="timeline">${items}</div>
+        <div class="process-board">
+          ${featured}
+          <div class="process-grid">
+            ${items}
+          </div>
         </div>
       </div>
     </section>
