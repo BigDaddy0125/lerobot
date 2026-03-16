@@ -20,6 +20,7 @@ export function renderHeader(content) {
           </span>
         </a>
         <div class="header-right">
+          <p class="header-status">Prototype Planning</p>
           <div class="locale-switch" aria-label="Language switcher">
             <a href="${buildLocalizedHref(content.activePath, 'ja')}" ${content.locale === 'ja' ? 'aria-current="page"' : ''}>${content.localeSwitch.ja}</a>
             <a href="${buildLocalizedHref(content.activePath, 'en')}" ${content.locale === 'en' ? 'aria-current="page"' : ''}>${content.localeSwitch.en}</a>

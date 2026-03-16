@@ -8,7 +8,7 @@ export function renderHero(content, locale) {
   const metrics = content.metrics
     .map(
       (item) => `
-        <div>
+        <div class="hero-metric-card">
           <dt>${item.label}</dt>
           <dd>${item.value}</dd>
         </div>
@@ -16,7 +16,17 @@ export function renderHero(content, locale) {
     )
     .join('')
 
-  const [primary, secondary, tertiary] = content.blueprint
+  const blueprint = content.blueprint
+    .map(
+      (item, index) => `
+        <article class="hero-blueprint-card hero-blueprint-card-${index + 1}">
+          <span>0${index + 1}</span>
+          <h3>${item.title}</h3>
+          <p>${item.body}</p>
+        </article>
+      `,
+    )
+    .join('')
 
   const summary = `
     <article class="signal-summary">
@@ -28,26 +38,6 @@ export function renderHero(content, locale) {
       <h2>${content.panel.title}</h2>
       <p>${content.panel.body}</p>
     </article>
-  `
-
-  const details = `
-    <div class="signal-detail-grid">
-      <article class="signal-detail-card">
-        <p class="signal-entry-kicker">${primary.title}</p>
-        <p>${primary.body}</p>
-      </article>
-      <article class="signal-detail-card">
-        <p class="signal-entry-kicker">${secondary.title}</p>
-        <p>${secondary.body}</p>
-      </article>
-    </div>
-  `
-
-  const strip = `
-    <div class="signal-strip" aria-label="System Flow">
-      ${content.diagram.map((item) => `<span>${item}</span>`).join('')}
-    </div>
-    <p class="signal-strip-note">${tertiary.title}: ${tertiary.body}</p>
   `
 
   return `
@@ -64,8 +54,12 @@ export function renderHero(content, locale) {
         <div class="hero-panel reveal">
           <div class="signal-card">
             ${summary}
-            ${details}
-            ${strip}
+            <div class="hero-diagram" aria-label="System Flow">
+              ${content.diagram.map((item) => `<span>${item}</span>`).join('')}
+            </div>
+            <div class="hero-blueprint-grid">
+              ${blueprint}
+            </div>
           </div>
         </div>
       </div>
