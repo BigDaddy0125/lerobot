@@ -2,15 +2,13 @@ export function renderArchitecture(content) {
   const layers = content.layers
     .map(
       (item) => `
-        <article class="architecture-card reveal">
-          <div class="architecture-card-head">
+        <article class="architecture-tile reveal">
+          <div class="architecture-tile-top">
             <span class="layer-tag">${item.tag}</span>
-            <span class="architecture-connector" aria-hidden="true"></span>
+            <p class="architecture-tile-label">${item.title}</p>
           </div>
-          <div class="architecture-card-body">
-            <h3>${item.title}</h3>
-            <p>${item.body}</p>
-          </div>
+          <h3>${item.title}</h3>
+          <p>${item.body}</p>
         </article>
       `,
     )
@@ -19,12 +17,12 @@ export function renderArchitecture(content) {
   return `
     <section id="architecture" class="section architecture-section">
       <div class="container section-shell architecture-flow">
-        <div class="section-heading split reveal">
+        <div class="section-heading compact reveal">
           <p class="eyebrow">${content.eyebrow}</p>
           <h2>${content.title}</h2>
           <p>${content.description}</p>
         </div>
-        <div class="architecture-board architecture-track reveal">${layers}</div>
+        <div class="architecture-board architecture-grid reveal">${layers}</div>
       </div>
     </section>
   `

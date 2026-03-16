@@ -1,4 +1,8 @@
 export function renderSolution(content) {
+  const glance = content.items
+    .map((item) => `<span>${item.title}</span>`)
+    .join('')
+
   const items = content.items
     .map(
       (item) => `
@@ -25,6 +29,9 @@ export function renderSolution(content) {
           <article class="scope-manifesto reveal">
             <p class="scope-manifesto-kicker">System Premise</p>
             <p>${content.description}</p>
+            <div class="scope-manifesto-glance">
+              ${glance}
+            </div>
           </article>
           <div class="scope-rail">
             ${items}
