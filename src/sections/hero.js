@@ -17,9 +17,10 @@ export function renderHero(content, locale) {
     .join('')
 
   const blueprint = content.blueprint
+    .slice(0, 2)
     .map(
       (item, index) => `
-        <article class="hero-blueprint-card hero-blueprint-card-${index + 1}">
+        <article class="hero-brief-card">
           <span>0${index + 1}</span>
           <h3>${item.title}</h3>
           <p>${item.body}</p>
@@ -54,10 +55,10 @@ export function renderHero(content, locale) {
         <div class="hero-panel reveal">
           <div class="signal-card">
             ${summary}
-            <div class="hero-diagram" aria-label="System Flow">
-              ${content.diagram.map((item) => `<span>${item}</span>`).join('')}
+            <div class="hero-signal-strip" aria-label="System Scope">
+              ${content.diagram.slice(0, 3).map((item) => `<span>${item}</span>`).join('')}
             </div>
-            <div class="hero-blueprint-grid">
+            <div class="hero-brief-grid">
               ${blueprint}
             </div>
           </div>
