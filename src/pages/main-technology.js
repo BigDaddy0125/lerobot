@@ -1,4 +1,4 @@
 import './shared'
 import { renderTechnologyPage } from './technology'
 
-window.__LEROBOT_RENDER_PAGE__(renderTechnologyPage)
+window.__CLEARBOT_RENDER_PAGE__(renderTechnologyPage)

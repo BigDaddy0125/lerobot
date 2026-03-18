@@ -4,7 +4,7 @@ import { setupReveal } from '../utils/reveal'
 import { applySeo } from '../utils/seo'
 import { getLocaleFromUrl } from '../utils/locale'
 
-window.__LEROBOT_RENDER_PAGE__ = (renderPage) => {
+window.__CLEARBOT_RENDER_PAGE__ = (renderPage) => {
   const app = document.querySelector('#app')
 
   if (!app) {

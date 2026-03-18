@@ -16,11 +16,11 @@ export function getLocaleFromUrl() {
   const url = new URL(window.location.href)
   const queryLocale = url.searchParams.get('lang')
   if (SUPPORTED_LOCALES.includes(queryLocale)) {
-    localStorage.setItem('lerobot-locale', queryLocale)
+    localStorage.setItem('clearbot-locale', queryLocale)
     return queryLocale
   }
 
-  const stored = localStorage.getItem('lerobot-locale')
+  const stored = localStorage.getItem('clearbot-locale')
   if (SUPPORTED_LOCALES.includes(stored)) {
     return stored
   }

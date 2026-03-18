@@ -1,4 +1,4 @@
 import './shared'
 import { renderCompanyPage } from './company'
 
-window.__LEROBOT_RENDER_PAGE__(renderCompanyPage)
+window.__CLEARBOT_RENDER_PAGE__(renderCompanyPage)
