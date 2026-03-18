@@ -139,7 +139,7 @@ export const homeContent = {
     },
     hero: {
       eyebrow: 'Remote Support Robotics / Arm Development',
-      title: '<span class="hero-line">From <span>system design</span></span><span class="hero-line"><span>to prototype validation</span></span><span class="hero-line">for remote support robots</span><span class="hero-line">and robotic arms.</span>',
+      title: '<span class="hero-line">Remote support robots</span><span class="hero-line">and robotic arms,</span><span class="hero-line hero-line-accent">from system design</span><span class="hero-line">to prototype validation.</span>',
       lead:
         'Ishitake is developing remote support robotics by combining ClearBot, ROS2, Jetson Nano, AWS IoT, mobile bases, robotic arms, teleoperation, and cloud connectivity. The focus is on turning documented technical building blocks into validated prototype systems for home support and welfare-oriented use cases.',
       panel: {
