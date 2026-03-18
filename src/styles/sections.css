@@ -177,9 +177,9 @@
 
 .signal-card {
   display: grid;
-  gap: 14px;
+  gap: 18px;
   border-radius: 34px;
-  padding: 18px;
+  padding: 22px;
   background:
     linear-gradient(180deg, rgba(255, 244, 230, 0.02), rgba(255, 244, 230, 0.006)),
     var(--panel-strong);
@@ -189,8 +189,8 @@
 
 .signal-summary {
   display: grid;
-  gap: 8px;
-  margin-bottom: 6px;
+  gap: 10px;
+  margin-bottom: 0;
 }
 
 .signal-summary-head {
@@ -235,16 +235,18 @@
 }
 
 .hero-signal-strip {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 8px;
+  padding-top: 2px;
 }
 
 .hero-signal-strip span {
-  display: block;
-  padding: 9px 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 10px;
   border-radius: 12px;
-  text-align: center;
   font-family: var(--font-ui);
   font-size: 0.74rem;
   letter-spacing: 0.04em;
@@ -254,38 +256,47 @@
 
 .hero-brief-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
 }
 
 .hero-brief-card {
   display: grid;
-  gap: 8px;
+  grid-template-columns: 42px 1fr;
+  gap: 12px;
+  align-items: start;
   padding: 14px;
   border-radius: 16px;
   border: 1px solid rgba(208, 194, 173, 0.08);
   background: rgba(255, 244, 230, 0.016);
 }
 
-.hero-brief-card span {
+.hero-brief-index {
   color: rgba(243, 238, 231, 0.22);
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 0.98rem;
   font-weight: 700;
   line-height: 1;
+  padding-top: 2px;
+}
+
+.hero-brief-copy {
+  display: grid;
+  gap: 6px;
 }
 
 .hero-brief-card h3 {
   margin-bottom: 0;
   font-family: var(--font-display);
-  font-size: 1rem;
-  line-height: 1.05;
+  font-size: 0.98rem;
+  line-height: 1.08;
 }
 
 .hero-brief-card p {
   margin-bottom: 0;
   color: var(--text-soft);
-  line-height: 1.55;
+  font-size: 0.9rem;
+  line-height: 1.58;
 }
 
 .intro-strip {
@@ -1051,6 +1062,7 @@
   }
 
   .hero-metrics,
+  .hero-brief-grid,
   .architecture-track,
   .capability-uniform-grid,
   .deep-grid,
@@ -1131,8 +1143,6 @@
   }
 
   .hero-metrics,
-  .hero-signal-strip,
-  .hero-brief-grid,
   .scope-stage,
   .architecture-track,
   .capability-uniform-grid,
@@ -1160,6 +1170,10 @@
   .architecture-board,
   .trust-manifesto {
     padding: 14px;
+  }
+
+  .hero-brief-grid {
+    grid-template-columns: 1fr;
   }
 
   .scope-rail-item,
