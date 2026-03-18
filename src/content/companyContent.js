@@ -1,7 +1,7 @@
 export const companyContent = {
   ja: {
     seo: {
-      title: 'Company | 石竹株式会社 clearBot',
+      title: 'Company | 石竹株式会社 ClearBot',
       description:
         '石竹株式会社の会社紹介。SES、AWS、AI 受託開発からロボティクス・IoT 研究開発へと広げてきた技術基盤と、共同開発体制を紹介します。',
       keywords: '石竹株式会社, robotics company, AWS, AI, SES, company profile',
@@ -69,7 +69,7 @@ export const companyContent = {
   },
   en: {
     seo: {
-      title: 'Company | Ishitake clearBot',
+      title: 'Company | Ishitake ClearBot',
       description:
         'Company profile for Ishitake, showing the engineering base that extends from SES, AWS, and AI contract work into robotics and IoT R&D.',
       keywords: 'Ishitake, robotics company, AWS, AI, SES, company profile',

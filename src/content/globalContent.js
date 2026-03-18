@@ -1,7 +1,7 @@
 export const globalContent = {
   ja: {
     brand: {
-      name: 'clearBot',
+      name: 'ClearBot',
       company: 'Ishitake Co., Ltd.',
     },
     nav: [
@@ -18,13 +18,13 @@ export const globalContent = {
       note: '石竹株式会社の遠隔支援ロボット・機械腕開発事業サイト。',
       links: [
         { label: 'ishitakes.com', href: 'https://ishitakes.com/' },
-        { label: 'clearBot', href: 'https://github.com/huggingface/lerobot' },
+        { label: 'ClearBot', href: 'https://github.com/huggingface/lerobot' },
       ],
     },
   },
   en: {
     brand: {
-      name: 'clearBot',
+      name: 'ClearBot',
       company: 'Ishitake Co., Ltd.',
     },
     nav: [
@@ -41,7 +41,7 @@ export const globalContent = {
       note: 'Official site for Ishitake remote support robotics and robotic arm development.',
       links: [
         { label: 'ishitakes.com', href: 'https://ishitakes.com/' },
-        { label: 'clearBot', href: 'https://github.com/huggingface/lerobot' },
+        { label: 'ClearBot', href: 'https://github.com/huggingface/lerobot' },
       ],
     },
   },

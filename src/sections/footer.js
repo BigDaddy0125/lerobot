@@ -4,7 +4,7 @@ export function renderFooter(content) {
       <div class="container footer-shell">
         <div class="footer-inner">
           <div class="footer-brand">
-  <p class="footer-kicker">clearBot</p>
+  <p class="footer-kicker">ClearBot</p>
             <p>${content.footer.note}</p>
           </div>
           <div class="footer-links">
