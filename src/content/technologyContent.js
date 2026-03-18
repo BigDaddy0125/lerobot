@@ -3,14 +3,14 @@ export const technologyContent = {
     seo: {
       title: 'Technology | 遠隔支援ロボット・機械腕開発',
       description:
-        '石竹株式会社のロボティクス技術構成。LeRobot、ROS2、Jetson Nano、AWS IoT、YOLOv8、MoveIt2 を用いた遠隔支援ロボット開発の技術スタックを紹介します。',
-      keywords: 'robotics stack, ROS2, Jetson Nano, AWS IoT, YOLOv8, MoveIt2, LeRobot',
+        '石竹株式会社のロボティクス技術構成。clearBot、ROS2、Jetson Nano、AWS IoT、YOLOv8、MoveIt2 を用いた遠隔支援ロボット開発の技術スタックを紹介します。',
+      keywords: 'robotics stack, ROS2, Jetson Nano, AWS IoT, YOLOv8, MoveIt2, clearBot',
     },
     hero: {
       eyebrow: 'Technology',
       title: 'ハード、ソフト、クラウドを分断しない <span>開発構成</span>。',
       lead:
-        'このページでは、資料に記載されたロボット技術構成を整理しています。LeRobot / XLeRobot、ROS2、Jetson Nano、AWS IoT、センサー類、遠隔操作 UI を組み合わせ、遠隔支援ロボットを構成する考え方を見せるためのページです。',
+        'このページでは、資料に記載されたロボット技術構成を整理しています。clearBot、ROS2、Jetson Nano、AWS IoT、センサー類、遠隔操作 UI を組み合わせ、遠隔支援ロボットを構成する考え方を見せるためのページです。',
       panel: {
         liveLabel: 'Tech Stack',
         statusLabel: 'Documented Components',
@@ -71,14 +71,14 @@ export const technologyContent = {
     seo: {
       title: 'Technology | Remote Support Robotics',
       description:
-        'The robotics architecture behind Ishitake remote support robotics, covering LeRobot, ROS2, Jetson Nano, AWS IoT, YOLOv8, and MoveIt2.',
-      keywords: 'robotics stack, ROS2, Jetson Nano, AWS IoT, YOLOv8, MoveIt2, LeRobot',
+        'The robotics architecture behind Ishitake remote support robotics, covering clearBot, ROS2, Jetson Nano, AWS IoT, YOLOv8, and MoveIt2.',
+      keywords: 'robotics stack, ROS2, Jetson Nano, AWS IoT, YOLOv8, MoveIt2, clearBot',
     },
     hero: {
       eyebrow: 'Technology',
       title: 'A <span>development architecture</span> that does not split hardware, software, and cloud.',
       lead:
-        'This page reorganizes the documented robotics stack into a more readable technical structure. It brings together LeRobot / XLeRobot, ROS2, Jetson Nano, AWS IoT, sensors, and teleoperation interfaces to show how the remote robotics system is being framed.',
+        'This page reorganizes the documented robotics stack into a more readable technical structure. It brings together clearBot, ROS2, Jetson Nano, AWS IoT, sensors, and teleoperation interfaces to show how the remote robotics system is being framed.',
       panel: {
         liveLabel: 'Tech Stack',
         statusLabel: 'Documented Components',

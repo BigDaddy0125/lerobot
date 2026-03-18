@@ -3,15 +3,15 @@ export const homeContent = {
     seo: {
       title: '遠隔支援ロボット・機械腕開発 | 石竹株式会社',
       description:
-        '石竹株式会社の遠隔支援ロボット・機械腕開発事業。LeRobot、ROS2、Jetson Nano、AWS IoT を組み合わせ、移動台車、遠隔操作、機械腕、クラウド運用まで設計します。',
+        '石竹株式会社の遠隔支援ロボット・機械腕開発事業。clearBot、ROS2、Jetson Nano、AWS IoT を組み合わせ、移動台車、遠隔操作、機械腕、クラウド運用まで設計します。',
       keywords:
-        '遠隔支援ロボット,機械腕開発,ロボット開発,ROS2,LeRobot,Jetson Nano,AWS IoT,石竹株式会社',
+        '遠隔支援ロボット,機械腕開発,ロボット開発,ROS2,clearBot,Jetson Nano,AWS IoT,石竹株式会社',
     },
     hero: {
       eyebrow: 'Remote Support Robotics / Robotic Arm Development',
       title: '遠隔支援ロボットと機械腕を、<span>構成設計から試作</span>まで進める。',
       lead:
-        '石竹株式会社は、LeRobot / XLeRobot、ROS2、Jetson Nano、AWS IoT を基盤に、移動台車、機械腕、遠隔操作、クラウド連携を組み合わせた遠隔支援ロボットの開発に取り組んでいます。家庭内支援や福祉施設向け展開を見据えた構成を、試作と検証を通じて具体化します。',
+        '石竹株式会社は、clearBot、ROS2、Jetson Nano、AWS IoT を基盤に、移動台車、機械腕、遠隔操作、クラウド連携を組み合わせた遠隔支援ロボットの開発に取り組んでいます。家庭内支援や福祉施設向け展開を見据えた構成を、試作と検証を通じて具体化します。',
       panel: {
         liveLabel: 'Source-Aligned',
         statusLabel: 'Prototype Planning',
@@ -24,7 +24,7 @@ export const homeContent = {
         { label: '技術を見る', href: '/technology.html', variant: 'secondary' },
       ],
       metrics: [
-        { label: 'Core Stack', value: 'LeRobot / ROS2 / Jetson / AWS IoT' },
+        { label: 'Core Stack', value: 'clearBot / ROS2 / Jetson / AWS IoT' },
         { label: 'Arm Payload', value: '最大 800g クラス' },
         { label: 'Remote Control', value: 'WebRTC / ROS2 Bridge / Web UI' },
       ],
@@ -48,7 +48,7 @@ export const homeContent = {
       description: '移動、把持、遠隔操作、監視、更新、安全設計を一体で考える構成です。',
       items: [
         { index: '01', title: '移動と作業を分けずに設計', body: '小型自走台車と機械腕を組み合わせ、家庭内や屋内での遠隔支援を想定した構成を検討します。' },
-        { index: '02', title: 'オープンソース基盤を活用', body: 'LeRobot / XLeRobot を基盤にしながら、既存構成との互換性や試作速度を重視します。' },
+        { index: '02', title: 'clearBot を開発基盤に活用', body: 'clearBot を基盤にしながら、既存構成との互換性や試作速度を重視します。' },
         { index: '03', title: '遠隔運用まで含めて考える', body: 'AWS IoT、WebRTC、Web UI を組み合わせ、監視や更新を含む運用導線まで視野に入れます。' },
       ],
     },
@@ -80,7 +80,7 @@ export const homeContent = {
       eyebrow: 'Documented Advantages',
       title: '資料から確認できた開発上の特徴。',
       items: [
-        { title: 'Open Source Compatibility', body: 'LeRobot / XLeRobot を基盤に、既存コードや戦略を移植しやすい構成を目指す。', meta: 'Compatibility' },
+        { title: 'clearBot Compatibility', body: 'clearBot を基盤に、既存コードや戦略を移植しやすい構成を目指す。', meta: 'Compatibility' },
         { title: 'Prototype Cost Awareness', body: '3Dプリント、汎用部材、モジュール設計を用いて試作コストを抑える方向性。', meta: 'Prototype' },
         { title: 'Remote Operations', body: '遠隔操作、状態表示、クラウド連携、OTA 更新を含む運用設計。', meta: 'Operations' },
         { title: 'Japan Environment Fit', body: '畳や段差など、日本の居住環境を前提にした移動・利用シーンへの対応。', meta: 'Environment' },
@@ -133,15 +133,15 @@ export const homeContent = {
     seo: {
       title: 'Remote Support Robotics & Robotic Arm Development | Ishitake',
       description:
-        'Ishitake develops remote support robotics using LeRobot, ROS2, Jetson Nano, and AWS IoT, covering mobility, teleoperation, robotic arms, and cloud-linked operations.',
+        'Ishitake develops remote support robotics using clearBot, ROS2, Jetson Nano, and AWS IoT, covering mobility, teleoperation, robotic arms, and cloud-linked operations.',
       keywords:
-        'remote support robotics, robotic arm development, ROS2, LeRobot, Jetson Nano, AWS IoT, Ishitake',
+        'remote support robotics, robotic arm development, ROS2, clearBot, Jetson Nano, AWS IoT, Ishitake',
     },
     hero: {
       eyebrow: 'Remote Support Robotics / Robotic Arm Development',
       title: 'From <span>system design to prototyping</span> for remote support robots and robotic arms.',
       lead:
-        'Ishitake is developing remote support robotics by combining LeRobot / XLeRobot, ROS2, Jetson Nano, AWS IoT, mobile bases, robotic arms, teleoperation, and cloud connectivity. The focus is on turning documented technical building blocks into validated prototype systems for home support and welfare-oriented use cases.',
+        'Ishitake is developing remote support robotics by combining clearBot, ROS2, Jetson Nano, AWS IoT, mobile bases, robotic arms, teleoperation, and cloud connectivity. The focus is on turning documented technical building blocks into validated prototype systems for home support and welfare-oriented use cases.',
       panel: {
         liveLabel: 'Source-Aligned',
         statusLabel: 'Prototype Planning',
@@ -154,7 +154,7 @@ export const homeContent = {
         { label: 'View Technology', href: '/technology.html', variant: 'secondary' },
       ],
       metrics: [
-        { label: 'Core Stack', value: 'LeRobot / ROS2 / Jetson / AWS IoT' },
+        { label: 'Core Stack', value: 'clearBot / ROS2 / Jetson / AWS IoT' },
         { label: 'Arm Payload', value: 'Up to 800g class' },
         { label: 'Remote Control', value: 'WebRTC / ROS2 Bridge / Web UI' },
       ],
@@ -178,7 +178,7 @@ export const homeContent = {
       description: 'Mobility, manipulation, teleoperation, monitoring, updates, and safety are handled as one architecture.',
       items: [
         { index: '01', title: 'Design mobility and work together', body: 'The concept combines a compact self-driving base with a robotic arm for indoor remote support scenarios.' },
-        { index: '02', title: 'Use open-source foundations carefully', body: 'LeRobot / XLeRobot is treated as a foundation to preserve compatibility while accelerating prototyping.' },
+        { index: '02', title: 'Use clearBot as the project foundation', body: 'clearBot is treated as the foundation to preserve compatibility while accelerating prototyping.' },
         { index: '03', title: 'Include remote operations from day one', body: 'AWS IoT, WebRTC, and web interfaces are considered part of the operating model, not an afterthought.' },
       ],
     },
@@ -210,7 +210,7 @@ export const homeContent = {
       eyebrow: 'Documented Advantages',
       title: 'Characteristics grounded in the provided materials.',
       items: [
-        { title: 'Open Source Compatibility', body: 'Aiming for easier transfer of code and strategy by staying close to LeRobot / XLeRobot foundations.', meta: 'Compatibility' },
+        { title: 'clearBot Compatibility', body: 'Aiming for easier transfer of code and strategy by staying close to the clearBot foundation.', meta: 'Compatibility' },
         { title: 'Prototype Cost Awareness', body: '3D printing, general-purpose components, and modular thinking for lower-cost prototyping.', meta: 'Prototype' },
         { title: 'Remote Operations', body: 'Teleoperation, system visibility, cloud linkage, and OTA updates as part of the design scope.', meta: 'Operations' },
         { title: 'Japan Environment Fit', body: 'Support for tatami-like environments, indoor level changes, and Japan-specific living layouts.', meta: 'Environment' },

@@ -12,7 +12,7 @@ export function renderHeader(content) {
   return `
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="${buildLocalizedHref('/index.html', content.locale)}" aria-label="Remote Robotics top">
+  <a class="brand" href="${buildLocalizedHref('/index.html', content.locale)}" aria-label="clearBot top">
           <span class="brand-mark">IR</span>
           <span class="brand-copy">
             <strong>${content.brand.name}</strong>
