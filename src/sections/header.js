@@ -12,15 +12,18 @@ export function renderHeader(content) {
   return `
     <header class="site-header">
       <div class="container header-inner">
-  <a class="brand" href="${buildLocalizedHref('/index.html', content.locale)}" aria-label="ClearBot top">
-          <span class="brand-mark">IR</span>
+        <a class="brand" href="${buildLocalizedHref('/index.html', content.locale)}" aria-label="ClearBot top">
+          <span class="brand-mark">CB</span>
           <span class="brand-copy">
             <strong>${content.brand.name}</strong>
-            <small>${content.brand.company}</small>
+            <small>Remote robotics systems</small>
           </span>
         </a>
+        <div class="nav-shell">
+          <nav id="site-nav" class="site-nav" aria-label="Primary navigation">${nav}</nav>
+        </div>
         <div class="header-right">
-          <p class="header-status">Prototype Planning</p>
+          <p class="header-status"><span class="header-status-dot" aria-hidden="true"></span>Prototype Planning</p>
           <div class="locale-switch" aria-label="Language switcher">
             <a href="${buildLocalizedHref(content.activePath, 'ja')}" ${content.locale === 'ja' ? 'aria-current="page"' : ''}>${content.localeSwitch.ja}</a>
             <a href="${buildLocalizedHref(content.activePath, 'en')}" ${content.locale === 'en' ? 'aria-current="page"' : ''}>${content.localeSwitch.en}</a>
@@ -29,7 +32,6 @@ export function renderHeader(content) {
             Menu
           </button>
         </div>
-        <nav id="site-nav" class="site-nav" aria-label="Primary navigation">${nav}</nav>
       </div>
     </header>
   `
