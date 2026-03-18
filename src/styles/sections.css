@@ -130,7 +130,8 @@
   background: rgba(255, 244, 230, 0.03);
   color: var(--accent-3);
   font-size: 0.72rem;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
+  text-transform: none;
 }
 
 .hero-lead {
