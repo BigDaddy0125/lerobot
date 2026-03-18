@@ -77,15 +77,10 @@
 
 .hero h1 .hero-line {
   display: block;
-  max-width: 11ch;
 }
 
 .hero h1 .hero-line-accent {
   color: var(--accent);
-}
-
-.hero h1 .hero-line:last-child {
-  max-width: 10ch;
 }
 
 .hero h1 span {
