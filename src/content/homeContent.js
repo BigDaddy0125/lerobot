@@ -9,7 +9,7 @@ export const homeContent = {
     },
     hero: {
       eyebrow: 'Remote Support Robotics / Robotic Arm Development',
-      title: '<span class="hero-line">\u9060\u9694\u652f\u63f4\u30ed\u30dc\u30c3\u30c8\u3068</span><span class="hero-line">\u6a5f\u68b0\u8155\u3092\u3001</span><span class="hero-line hero-line-accent">\u69cb\u6210\u8a2d\u8a08\u304b\u3089\u8a66\u4f5c\u307e\u3067</span><span class="hero-line">\u9032\u3081\u308b\u3002</span>',
+      title: '<span class="hero-line">\u9060\u9694\u652f\u63f4\u30ed\u30dc\u30c3\u30c8\u3068</span><span class="hero-line">\u6a5f\u68b0\u8155\u3092\u3001</span><span class="hero-line hero-line-accent">\u69cb\u6210\u8a2d\u8a08\u304b\u3089</span><span class="hero-line">\u8a66\u4f5c\u307e\u3067\u9032\u3081\u308b\u3002</span>',
       lead:
         '石竹株式会社は、ClearBot、ROS2、Jetson Nano、AWS IoT を基盤に、移動台車、機械腕、遠隔操作、クラウド連携を組み合わせた遠隔支援ロボットの開発に取り組んでいます。家庭内支援や福祉施設向け展開を見据えた構成を、試作と検証を通じて具体化します。',
       panel: {
@@ -139,7 +139,7 @@ export const homeContent = {
     },
     hero: {
       eyebrow: 'Remote Support Robotics / Robotic Arm Development',
-      title: '<span class="hero-line">From <span>system design</span></span><span class="hero-line"><span>to prototyping</span></span><span class="hero-line">for remote support</span><span class="hero-line">robots and robotic arms.</span>',
+      title: '<span class="hero-line">From <span>system design</span></span><span class="hero-line"><span>to prototype validation</span></span><span class="hero-line">for remote support robots</span><span class="hero-line">and robotic arms.</span>',
       lead:
         'Ishitake is developing remote support robotics by combining ClearBot, ROS2, Jetson Nano, AWS IoT, mobile bases, robotic arms, teleoperation, and cloud connectivity. The focus is on turning documented technical building blocks into validated prototype systems for home support and welfare-oriented use cases.',
       panel: {

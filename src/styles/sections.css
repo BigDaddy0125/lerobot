@@ -65,21 +65,27 @@
 .hero h1 {
   max-width: none;
   display: grid;
-  gap: 0.02em;
+  gap: 0.06em;
   font-family: var(--font-display);
-  font-size: clamp(2.4rem, 5.2vw, 4.7rem);
-  line-height: 0.94;
-  letter-spacing: -0.05em;
+  font-size: clamp(2.2rem, 4.8vw, 4.25rem);
+  line-height: 0.95;
+  letter-spacing: -0.045em;
   font-weight: 800;
   text-wrap: initial;
+  align-items: start;
 }
 
 .hero h1 .hero-line {
   display: block;
+  max-width: 11ch;
 }
 
 .hero h1 .hero-line-accent {
   color: var(--accent);
+}
+
+.hero h1 .hero-line:last-child {
+  max-width: 10ch;
 }
 
 .hero h1 span {
@@ -104,7 +110,8 @@
 .hero-copy {
   display: grid;
   align-content: start;
-  padding: 22px;
+  gap: 16px;
+  padding: 28px 28px 24px;
   border-radius: 34px;
   border: 1px solid rgba(208, 194, 173, 0.09);
   background:
@@ -112,9 +119,24 @@
     rgba(28, 32, 39, 0.48);
 }
 
+.hero-copy .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin-bottom: 0;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(208, 194, 173, 0.12);
+  background: rgba(255, 244, 230, 0.03);
+  color: var(--accent-3);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+}
+
 .hero-lead {
-  max-width: 58ch;
-  font-size: 0.98rem;
+  max-width: 54ch;
+  margin-top: 2px;
+  font-size: 0.96rem;
 }
 
 .hero-metric-card {
